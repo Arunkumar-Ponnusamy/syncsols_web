@@ -1,0 +1,31 @@
+<?php
+namespace App\Http\Controllers;
+use DB;
+use Illuminate\Support\Facades\Input;
+
+class WebController extends Controller {
+
+//    function __construct()
+//    {
+//        View::share([
+//        ]);
+//    }
+    
+    public function showHome() {
+        return view('web.index');
+    }
+    
+    public function showAbout() {
+        return view('web.about');
+    }
+    
+    public function showService() {
+        return view('web.service');
+    }
+
+    public function showService1() {
+        return view('web.service1');
+    }
+    
+    
+}

@@ -1,0 +1,40 @@
+<?php
+namespace App\Http\Controllers;
+use DB;
+use Illuminate\Support\Facades\Input;
+use App\Admin;
+
+class AdminController extends Controller {
+
+//    function __construct()
+//    {
+//        View::share([
+//        ]);
+//    }
+    
+    public function showHome() {
+        return view('admin.calender');
+    }
+
+    public function login() {
+        $admin = Admin::where('username',Input::get('username'))->where('password',Input::get('password'));
+        if($admin)
+            return view('admin.index');
+        else
+            return view('admin.login');
+    }
+    
+    public function showAbout() {
+        return view('web.about');
+    }
+    
+    public function showService() {
+        return view('web.service');
+    }
+
+    public function showService1() {
+        return view('web.service1');
+    }
+    
+    
+}
