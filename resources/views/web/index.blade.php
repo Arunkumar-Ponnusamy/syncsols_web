@@ -22,8 +22,8 @@
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav class="link-effect-2" id="link-effect-2">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html" class="effect-3">Home</a></li>
-							<li><a href="about.html" class="effect-3">About</a></li>
+							<li class="active"><a href="{{url('/')}}" class="effect-3">Home</a></li>
+							<li><a href="{{url('aboutus')}}" class="effect-3">About</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">Services <b class="caret"></b></a>
 								<ul class="dropdown-menu agile_short_dropdown">
