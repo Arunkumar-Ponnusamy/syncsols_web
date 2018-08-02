@@ -40,6 +40,14 @@
     );
 
     Route::get(
+         'contact',
+            [
+                'as'        =>  'showContactpage',
+                'uses'      =>  'WebController@showContact'
+            ]
+    );
+
+    Route::get(
          'service',
             [
                 'as'        =>  'showServicepage',
