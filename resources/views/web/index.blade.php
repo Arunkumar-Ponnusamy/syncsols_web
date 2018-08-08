@@ -51,7 +51,7 @@
 							</div>
 						</div>
 						<div class="col-xs-9 wthree_banner_bottom_grid_right">
-							<h4>Digital Branding</h4>
+							<h4>NI SOFTWARE PLATFORM SERVICES</h4>
 							<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
 
 						</div>
@@ -68,7 +68,7 @@
 							</div>
 						</div>
 						<div class="col-xs-9 wthree_banner_bottom_grid_right">
-							<h4>Web Interactive</h4>
+							<h4>TEST and MEASUREMENT</h4>
 							<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
 
 						</div>
@@ -85,7 +85,7 @@
 							</div>
 						</div>
 						<div class="col-xs-9 wthree_banner_bottom_grid_right">
-							<h4>Graphic Design</h4>
+							<h4>Machine vision and machine learning</h4>
 							<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
 
 						</div>
@@ -267,8 +267,8 @@
 								</div>
 							</div>
 							<div class="col-xs-9 wthree_banner_bottom_grid_right">
-								<h4 class="sub_service_agileits">Digital Advertising</h4>
-								<p>Morbi viverra lacus commodo felis semper.Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+								<h4 class="sub_service_agileits">NI Software Platform Services</h4>
+								<p>Besides development, syncsols also provide software platform services to our clients. </p>
 								<div class="agileits-button two service">
 									<a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.html" role="button">Read More »</a>
 								</div>
@@ -286,8 +286,8 @@
 								</div>
 							</div>
 							<div class="col-xs-9 wthree_banner_bottom_grid_right">
-								<h4 class="sub_service_agileits">Media Buying</h4>
-								<p>Morbi viverra lacus commodo felis semper.Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+								<h4 class="sub_service_agileits">Test and Measurement</h4>
+								<p>In syncsols, we have experienced team in testing large number of equipment’s efficiently </p>
 								<div class="agileits-button two service">
 									<a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.html" role="button">Read More »</a>
 								</div>
@@ -305,8 +305,8 @@
 								</div>
 							</div>
 							<div class="col-xs-9 wthree_banner_bottom_grid_right">
-								<h4 class="sub_service_agileits">Marketing</h4>
-								<p>Morbi viverra lacus commodo felis semper.Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+								<h4 class="sub_service_agileits">Machine vision and machine learning</h4>
+								<p>We have implemented several custom algorithms that are being used in device </p>
 								<div class="agileits-button two service">
 									<a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.html" role="button">Read More »</a>
 								</div>
@@ -324,8 +324,8 @@
 								</div>
 							</div>
 							<div class="col-xs-9 wthree_banner_bottom_grid_right">
-								<h4 class="sub_service_agileits">Marketing Searching</h4>
-								<p>Morbi viverra lacus commodo felis semper.Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+								<h4 class="sub_service_agileits">Instrumentation and Control Monitoring</h4>
+								<p>We work on industrial projects that monitor and control the instruments. </p>
 								<div class="agileits-button two service">
 									<a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.html" role="button">Read More »</a>
 								</div>

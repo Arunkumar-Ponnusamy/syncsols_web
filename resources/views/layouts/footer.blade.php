@@ -29,10 +29,10 @@
 				<div class="col-md-2 w3layouts_footer_grid">
 					<h3>Our <span>Links</span> </h3>
 					  <ul class="links">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="mail.html">Mail Us</a></li>
+							<li><a href="{{url('/')}}">Home</a></li>
+							<li><a href="{{url('aboutus')}}">About</a></li>
+							<li><a href="{{'http://www.thelabview.com/'}}">Blog</a></li>
+							<li><a href="{{url('contact')}}">Mail Us</a></li>
 						</ul>
 				</div>
 				<div class="col-md-3 w3layouts_footer_grid">
@@ -53,7 +53,7 @@
 
 
 				<div class="clearfix"> </div>
-					<p class="copyright">© 2017 Publicize. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts</a></p>
+					<p class="copyright">© 2018 Syncsols. All Rights Reserved | Design by <a href="http://syncsols.com/" target="_blank">syncsols</a></p>
 			</div>
 	</div>
 	<!-- //footer -->

@@ -27,7 +27,7 @@
 	<div class="banner-bottom inner">
 		<div class="banner_bottom_w3ls_info">
 			<div class="wthree_head_section">
-				<h3 class="w3l_header w3_agileits_header">The very best solution for<span> your business website</span></h3>
+				<h3 class="w3l_header w3_agileits_header">The very best solution for<span> you</span></h3>
 			</div>
 
 			<p>SyncSols, established in 2015 providing solutions and services in the design, development, programming and integration of your automated system requirements. We are having 8+ years of experience in LabVIEW programming and NI hardware implementation. We design and develop LabVIEW software and hardware integration with different NI hardware and PLC’s. we have NI certified engineers holding CLAD and CLA certifications. Syncsols is an alliance partner of National Instruments for data acquisition hardware and LabVIEW developments.<br/><br/>
