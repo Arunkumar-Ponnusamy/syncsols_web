@@ -32,7 +32,7 @@
     );
 
     Route::get(
-         'about',
+         'aboutus',
             [
                 'as'        =>  'showAboutpage',
                 'uses'      =>  'WebController@showAbout'
