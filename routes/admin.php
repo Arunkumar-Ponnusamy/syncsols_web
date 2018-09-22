@@ -23,14 +23,6 @@
             ]
     );
 
-    Route::post(
-         'login',
-            [
-                'as'        =>  'postLogin',
-                'uses'      =>  'AdminController@login'
-            ]
-    );
-
     Route::get(
          'home',
             [
@@ -39,5 +31,7 @@
             ]
     );
 
-Route::post('/login',    'AdminController@showHome')->name('dashboard');
+Route::post('/login',    'AdminController@login')->name('login');
+Route::get('/dashboard',    'AdminController@dashboard')->name('dashboard');
+Route::get('/setting',    'AdminController@setting')->name('setting');
 

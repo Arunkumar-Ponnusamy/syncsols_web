@@ -25,18 +25,24 @@ class AdminController extends Controller {
     // }
     
     public function showHome() {
-        Setting::set('test','test');
-        Setting::save();
-            return view('admin.login');
-        return view('admin.calender');
+        return view('admin.login');
     }
 
     public function login() {
         // $admin = Admin::where('username',Input::get('username'))->where('password',Input::get('password'));
         // if($admin)
-            return view('admin.index');
+        // return view('admin.calender');
+            return redirect()->route('dashboard')->with('flash_success','logged in!');
         // else
         //     return view('admin.login');
+    }
+    
+    public function dashboard() {
+        return view('admin.dashboard');
+    }
+    
+    public function setting() {
+        return view('admin.settings');
     }
     
     public function showAbout() {
