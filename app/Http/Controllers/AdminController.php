@@ -4,6 +4,8 @@ use DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 use App\Admin;
+use App\Settings;
+use Setting;
 
 class AdminController extends Controller {
 
@@ -23,6 +25,8 @@ class AdminController extends Controller {
     // }
     
     public function showHome() {
+        Setting::set('test','test');
+        Setting::save();
             return view('admin.login');
         return view('admin.calender');
     }
