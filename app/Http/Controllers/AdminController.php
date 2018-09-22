@@ -28,11 +28,11 @@ class AdminController extends Controller {
     }
 
     public function login() {
-        $admin = Admin::where('username',Input::get('username'))->where('password',Input::get('password'));
-        if($admin)
+        // $admin = Admin::where('username',Input::get('username'))->where('password',Input::get('password'));
+        // if($admin)
             return view('admin.index');
-        else
-            return view('admin.login');
+        // else
+        //     return view('admin.login');
     }
     
     public function showAbout() {
