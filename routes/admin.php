@@ -39,3 +39,5 @@
             ]
     );
 
+Route::post('/login',    'AdminController@showHome')->name('dashboard');
+

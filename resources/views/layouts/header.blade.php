@@ -16,7 +16,7 @@
 		}
 	</script>
 	<!-- //custom-theme -->
-    <link href='http://www.syncsols.com/favicon.ico' rel='icon' type='image/x-icon'/>
+    <link rel="icon" href="{{asset('public/assets/img/fav.jpg')}}">
 	<link href="{{BASE_URL}}public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- Owl-carousel-CSS -->
 	<link href="{{BASE_URL}}public/css/owl.carousel.css" rel="stylesheet">

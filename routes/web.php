@@ -62,3 +62,7 @@
                 'uses'      =>  'WebController@showService1'
             ]
     );
+
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');

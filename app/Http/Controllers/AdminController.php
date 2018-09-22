@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use DB;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request;
 use App\Admin;
 
 class AdminController extends Controller {
@@ -11,8 +12,18 @@ class AdminController extends Controller {
 //        View::share([
 //        ]);
 //    }
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
     
     public function showHome() {
+            return view('admin.login');
         return view('admin.calender');
     }
 
