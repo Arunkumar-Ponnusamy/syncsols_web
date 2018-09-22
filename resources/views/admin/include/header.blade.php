@@ -12,6 +12,7 @@
         <meta name="author" content="ThemesGround">
 
         <!-- Base Css Files -->
+      <link rel="icon" href="{{asset('public/assets/img/fav.jpg')}}">
         <link href="{{BASE_URL}}public/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
         <link href="{{BASE_URL}}public/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
         <link href="{{BASE_URL}}public/assets/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
