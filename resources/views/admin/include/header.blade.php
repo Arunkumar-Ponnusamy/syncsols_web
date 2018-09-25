@@ -13,35 +13,35 @@
 
         <!-- Base Css Files -->
       <link rel="icon" href="{{asset('public/assets/img/fav.jpg')}}">
-        <link href="{{BASE_URL}}public/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
-        <link href="{{BASE_URL}}public/assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="{{BASE_URL}}public/assets/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-        <link href="{{BASE_URL}}public/assets/libs/fontello/css/fontello.css" rel="stylesheet" />
-        <link href="{{BASE_URL}}public/assets/libs/animate-css/animate.min.css" rel="stylesheet" />
-        <link href="{{BASE_URL}}public/assets/libs/nifty-modal/css/component.css" rel="stylesheet" />
-        <link href="{{BASE_URL}}public/assets/libs/magnific-popup/magnific-popup.css" rel="stylesheet" /> 
-        <link href="{{BASE_URL}}public/assets/libs/ios7-switch/ios7-switch.css" rel="stylesheet" /> 
-        <link href="{{BASE_URL}}public/assets/libs/pace/pace.css" rel="stylesheet" />
-        <link href="{{BASE_URL}}public/assets/libs/sortable/sortable-theme-bootstrap.css" rel="stylesheet" />
-        <link href="{{BASE_URL}}public/assets/libs/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
-        <link href="{{BASE_URL}}public/assets/libs/jquery-icheck/skins/all.css" rel="stylesheet" />
+        <link href="{{asset('public/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('public/assets/libs/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('public/assets/libs/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('public/assets/libs/fontello/css/fontello.css')}}" rel="stylesheet" />
+        <link href="{{asset('public/assets/libs/animate-css/animate.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('public/assets/libs/nifty-modal/css/component.css')}}" rel="stylesheet" />
+        <link href="{{asset('public/assets/libs/magnific-popup/magnific-popup.css')}}" rel="stylesheet" /> 
+        <link href="{{asset('public/assets/libs/ios7-switch/ios7-switch.css')}}" rel="stylesheet" /> 
+        <link href="{{asset('public/assets/libs/pace/pace.css')}}" rel="stylesheet" />
+        <link href="{{asset('public/assets/libs/sortable/sortable-theme-bootstrap.css')}}" rel="stylesheet" />
+        <link href="{{asset('public/assets/libs/bootstrap-datepicker/css/datepicker.css')}}" rel="stylesheet" />
+        <link href="{{asset('public/assets/libs/jquery-icheck/skins/all.css')}}" rel="stylesheet" />
         <!-- Code Highlighter for Demo -->
-        <link href="{{BASE_URL}}public/assets/libs/prettify/github.css" rel="stylesheet" />
+        <link href="{{asset('public/assets/libs/prettify/github.css')}}" rel="stylesheet" />
         
                 <!-- Extra CSS Libraries Start -->
  <!-- jvectormap -->
-    <link rel="stylesheet" href="{{BASE_URL}}public/assets/libs/jquery-jvectormap/css/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="{{asset('public/assets/libs/jquery-jvectormap/css/jquery-jvectormap-1.2.2.css')}}">
     <!-- Date Picker -->
-    <link rel="stylesheet" href="{{BASE_URL}}public/assets/libs/bootstrap-datepicker/css/datepicker.css">
+    <link rel="stylesheet" href="{{asset('public/assets/libs/bootstrap-datepicker/css/datepicker.css')}}">
 
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="{{BASE_URL}}public/assets/libs/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="{{asset('public/assets/libs/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
              <!-- Extra CSS Libraries Start -->
-                <link href="{{BASE_URL}}public/assets/libs/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css" />
-       <link href="{{BASE_URL}}public/assets/css/style.css" rel="stylesheet" type="text/css" />
-       <link href="{{BASE_URL}}public/assets/css/main.css" rel="stylesheet" type="text/css" />
+                <link href="{{asset('public/assets/libs/fullcalendar/fullcalendar.css')}}" rel="stylesheet" type="text/css" />
+       <link href="{{asset('public/assets/css/style.css')}}" rel="stylesheet" type="text/css" />
+       <link href="{{asset('public/assets/css/main.css')}}" rel="stylesheet" type="text/css" />
                 <!-- Extra CSS Libraries End -->
-        <link href="{{BASE_URL}}public/assets/css/style-responsive.css" rel="stylesheet" />
+        <link href="{{asset('public/assets/css/style-responsive.css')}}" rel="stylesheet" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,14 +51,14 @@
         <![endif]-->
 
         
-        <link rel="apple-touch-icon" href="{{BASE_URL}}public/assets/img/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="{{BASE_URL}}public/assets/img/apple-touch-icon-57x57.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="{{BASE_URL}}public/assets/img/apple-touch-icon-72x72.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="{{BASE_URL}}public/assets/img/apple-touch-icon-76x76.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="{{BASE_URL}}public/assets/img/apple-touch-icon-114x114.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="{{BASE_URL}}public/assets/img/apple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="{{BASE_URL}}public/assets/img/apple-touch-icon-144x144.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="{{BASE_URL}}public/assets/img/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" href="{{asset('public/assets/img/apple-touch-icon.png')}}" />
+        <link rel="apple-touch-icon" sizes="57x57" href="{{asset('public/assets/img/apple-touch-icon-57x57.png')}}" />
+        <link rel="apple-touch-icon" sizes="72x72" href="{{asset('public/assets/img/apple-touch-icon-72x72.png')}}" />
+        <link rel="apple-touch-icon" sizes="76x76" href="{{asset('public/assets/img/apple-touch-icon-76x76.png')}}" />
+        <link rel="apple-touch-icon" sizes="114x114" href="{{asset('public/assets/img/apple-touch-icon-114x114.png')}}" />
+        <link rel="apple-touch-icon" sizes="120x120" href="{{asset('public/assets/img/apple-touch-icon-120x120.png')}}" />
+        <link rel="apple-touch-icon" sizes="144x144" href="{{asset('public/assets/img/apple-touch-icon-144x144.png')}}" />
+        <link rel="apple-touch-icon" sizes="152x152" href="{{asset('public/assets/img/apple-touch-icon-152x152.png')}}" />
     </head>
     <body class="fixed-left">
         <!-- Modal Start -->
@@ -141,7 +141,7 @@
                       <li><!-- start message -->
                         <a href="#">
                           <div class="pull-left">
-                            <img src="{{BASE_URL}}public/images/users/user2-160x160.jpg" class="img-circle" alt="User Image">
+                            <img src="{{asset('public/images/users/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
                           </div>
                           <h4>
                             Support Team
@@ -153,7 +153,7 @@
                       <li>
                         <a href="#">
                           <div class="pull-left">
-                            <img src="{{BASE_URL}}public/images/users/user3-128x128.jpg" class="img-circle" alt="User Image">
+                            <img src="{{asset('public/images/users/user3-128x128.jpg')}}" class="img-circle" alt="User Image">
                           </div>
                           <h4>
                             Nexus Design Team
@@ -165,7 +165,7 @@
                       <li>
                         <a href="#">
                           <div class="pull-left">
-                            <img src="{{BASE_URL}}public/images/users/user4-128x128.jpg" class="img-circle" alt="User Image">
+                            <img src="{{asset('public/images/users/user4-128x128.jpg')}}" class="img-circle" alt="User Image">
                           </div>
                           <h4>
                             Developers
@@ -177,7 +177,7 @@
                       <li>
                         <a href="#">
                           <div class="pull-left">
-                            <img src="{{BASE_URL}}public/images/users/user3-128x128.jpg" class="img-circle" alt="User Image">
+                            <img src="{{asset('public/images/users/user3-128x128.jpg')}}" class="img-circle" alt="User Image">
                           </div>
                           <h4>
                             Sales Department
@@ -189,7 +189,7 @@
                       <li>
                         <a href="#">
                           <div class="pull-left">
-                            <img src="{{BASE_URL}}public/images/users/user4-128x128.jpg" class="img-circle" alt="User Image">
+                            <img src="{{asset('public/images/users/user4-128x128.jpg')}}" class="img-circle" alt="User Image">
                           </div>
                           <h4>
                             Reviewers
@@ -393,7 +393,7 @@
                   <h5 class="widget-user-desc">Web Designer</h5>
                 </div>
                 <div class="widget-user-image">
-                  <img class="img-circle" src="{{BASE_URL}}public/images/users/user3-128x128.jpg" alt="User Avatar">
+                  <img class="img-circle" src="{{asset('public/images/users/user3-128x128.jpg')}}" alt="User Avatar">
                 </div>
                 <div class="box-footer">
                   <div class="row">
@@ -422,14 +422,14 @@
               <div class="box box-widget">
                 <div class="box-header with-border">
                   <div class="user-block">
-                    <img class="img-circle" src="{{BASE_URL}}public/images/users/user1-128x128.jpg" alt="user image">
+                    <img class="img-circle" src="{{asset('public/images/users/user1-128x128.jpg')}}" alt="user image">
                     <span class="username"><a href="#">Jonathan Doe</a></span>
                     <span class="description">Shared publicly - 7:30 PM Today</span>
                   </div><!-- /.user-block -->
                   <!-- /.box-tools -->
                 </div><!-- /.box-header -->
                 <div class="box-body pad_none" style="display: block;">
-                  <img class="img-responsive pad_minus" src="{{BASE_URL}}public/assets/img/blog-img.jpg" alt="Photo">
+                  <img class="img-responsive pad_minus" src="{{asset('public/assets/img/blog-img.jpg')}}" alt="Photo">
                   <div style="padding:15px; overflow:hidden">
                   <p>Bacon ipsum dolor sit amet salami venison chicken.</p>
                 
@@ -439,7 +439,7 @@
                 <div class="box-footer box-comments" style="display: block;">
                   <div class="box-comment">
                     <!-- User image -->
-                    <img class="img-circle img-sm" src="{{BASE_URL}}public/images/users/user3-128x128.jpg" alt="user image">
+                    <img class="img-circle img-sm" src="{{asset('public/images/users/user3-128x128.jpg')}}" alt="user image">
                     <div class="comment-text">
                       <span class="username">
                         Kendra Hall
@@ -450,7 +450,7 @@
                   </div><!-- /.box-comment -->
                   <div class="box-comment">
                     <!-- User image -->
-                    <img class="img-circle img-sm" src="{{BASE_URL}}public/images/users/user4-128x128.jpg" alt="user image">
+                    <img class="img-circle img-sm" src="{{asset('public/images/users/user4-128x128.jpg')}}" alt="user image">
                     <div class="comment-text">
                       <span class="username">
                         Mark Doe
@@ -462,7 +462,7 @@
                 </div><!-- /.box-footer -->
                 <div class="box-footer" style="display: block;">
                   <form action="#" method="post">
-                    <img class="img-responsive img-circle img-sm" src="{{BASE_URL}}public/images/users/user4-128x128.jpg" alt="alt text">
+                    <img class="img-responsive img-circle img-sm" src="{{asset('public/images/users/user4-128x128.jpg')}}" alt="alt text">
                     <!-- .img-push is used to add margin to elements next to floating images -->
                     <div class="img-push">
                       <input type="text" class="form-control input-sm" placeholder="Enter your comment here">
