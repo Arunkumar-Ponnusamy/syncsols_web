@@ -38,16 +38,16 @@
 				<div class="col-md-3 w3layouts_footer_grid">
 					<h2>Contact <span>Us</span></h2>
 					    <ul class="con_inner_text">
-							<li><span class="fa fa-map-marker" aria-hidden="true"></span>1234k Avenue, 4th block, <label> New York City.</label></li>
-							<li><span class="fa fa-envelope-o" aria-hidden="true"></span> <a href="mailto:info@example.com">info@example.com</a></li>
-							<li><span class="fa fa-phone" aria-hidden="true"></span> +1234 567 567</li>
+							<li><span class="fa fa-map-marker" aria-hidden="true"></span>{{Setting::get('contact_address')}}<label> </label></li>
+							<li><span class="fa fa-envelope-o" aria-hidden="true"></span> <a href="">{{Setting::get('contact_email')}}</a></li>
+							<li><span class="fa fa-phone" aria-hidden="true"></span> {{Setting::get('contact_number')}}</li>
 						</ul>
 
 					<ul class="social_agileinfo">
-						<li><a href="#" class="w3_facebook"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#" class="w3_twitter"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#" class="w3_instagram"><i class="fa fa-instagram"></i></a></li>
-						<li><a href="#" class="w3_google"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="{{Setting::get('facebook')}}" class="w3_facebook"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="{{Setting::get('twitter')}}" class="w3_twitter"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="{{Setting::get('instagram')}}" class="w3_instagram"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="{{Setting::get('google')}}" class="w3_google"><i class="fa fa-google-plus"></i></a></li>
 					</ul>
 				</div>
 

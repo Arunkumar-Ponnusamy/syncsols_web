@@ -35,3 +35,5 @@ Route::post('/login',    'AdminController@login')->name('login');
 Route::get('/dashboard',    'AdminController@dashboard')->name('dashboard');
 Route::get('/setting',    'AdminController@setting')->name('setting');
 
+Route::post('/setting',    'AdminController@update_setting')->name('setting');
+

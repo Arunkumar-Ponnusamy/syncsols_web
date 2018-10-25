@@ -45,6 +45,19 @@ class AdminController extends Controller {
         return view('admin.settings');
     }
     
+    public function update_setting(Request $request) {
+        $requests = $request->except('_token');
+        foreach($requests as $key=>$value) {
+            if($key=='site_logo') {
+                $value = $request->site_logo->store('site');
+            }
+            Setting::set($key, $value);
+            Setting::save();
+        }
+            return redirect()->back()->with('flash_success','Settings Updated');
+
+    }
+
     public function showAbout() {
         return view('web.about');
     }

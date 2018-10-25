@@ -8,7 +8,7 @@
 					<p>Easy way to build Perfect websites</p>
 					<div class="w3-button">
 						<div class="w3ls-button">
-							<a href="single.html" class="hvr-shutter-out-vertical">Read More</a>
+							<a href="#" class="hvr-shutter-out-vertical">Read More</a>
 						</div>
 						<div class="w3l-button">
 							<a href="#portfolio" class="hvr-shutter-out-vertical scroll ">Portfolio</a>
@@ -133,7 +133,7 @@
 							<h5>Media Buying</h5>
 							<p>Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
 							<div class="agileits-button two service">
-								<a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.html" role="button">Read More »</a>
+								<a class="btn btn-primary btn-lg hvr-underline-from-left" href="#" role="button">Read More »</a>
 							</div>
 						</div>
 						<div class="col-md-6 mid-inner-sec">
@@ -141,7 +141,7 @@
 							<h5>Digital Advertising</h5>
 							<p>Lorem Ipsum is simply text the printing and typesetting standard industry.</p>
 							<div class="agileits-button two service">
-								<a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.html" role="button">Read More »</a>
+								<a class="btn btn-primary btn-lg hvr-underline-from-left" href="#" role="button">Read More »</a>
 							</div>
 						</div>
 					</div>
@@ -223,7 +223,6 @@
 		</div>
 	</div>
 	<!-- team -->
-
 	<!-- stats -->
 	<div class="stats" id="stats">
 		<div class="container">
@@ -270,7 +269,7 @@
 								<h4 class="sub_service_agileits">NI Software Platform Services</h4>
 								<p>Besides development, syncsols also provide software platform services to our clients. </p>
 								<div class="agileits-button two service">
-									<a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.html" role="button">Read More »</a>
+									<a class="btn btn-primary btn-lg hvr-underline-from-left" href="#" role="button">Read More »</a>
 								</div>
 							</div>
 							<div class="clearfix"> </div>
@@ -289,7 +288,7 @@
 								<h4 class="sub_service_agileits">Test and Measurement</h4>
 								<p>In syncsols, we have experienced team in testing large number of equipment’s efficiently </p>
 								<div class="agileits-button two service">
-									<a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.html" role="button">Read More »</a>
+									<a class="btn btn-primary btn-lg hvr-underline-from-left" href="#" role="button">Read More »</a>
 								</div>
 							</div>
 							<div class="clearfix"> </div>
@@ -308,7 +307,7 @@
 								<h4 class="sub_service_agileits">Machine vision and machine learning</h4>
 								<p>We have implemented several custom algorithms that are being used in device </p>
 								<div class="agileits-button two service">
-									<a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.html" role="button">Read More »</a>
+									<a class="btn btn-primary btn-lg hvr-underline-from-left" href="#" role="button">Read More »</a>
 								</div>
 							</div>
 							<div class="clearfix"> </div>
@@ -327,7 +326,7 @@
 								<h4 class="sub_service_agileits">Instrumentation and Control Monitoring</h4>
 								<p>We work on industrial projects that monitor and control the instruments. </p>
 								<div class="agileits-button two service">
-									<a class="btn btn-primary btn-lg hvr-underline-from-left" href="single.html" role="button">Read More »</a>
+									<a class="btn btn-primary btn-lg hvr-underline-from-left" href="#" role="button">Read More »</a>
 								</div>
 							</div>
 							<div class="clearfix"> </div>
@@ -498,7 +497,14 @@
 			</div>
 		</div>
 	</div>
-	<!-- //agile_testimonials -->
+    <script>
+	 $(document).ready(function() {
+  $('#media').carousel({
+    pause: true,
+    interval: false,
+  });
+});
+  </script>	<!-- //agile_testimonials -->
 
 	<!-- //map -->
 @include('layouts.footer')
