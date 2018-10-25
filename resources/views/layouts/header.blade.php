@@ -17,13 +17,13 @@
 	</script>
 	<!-- //custom-theme -->
     <link rel="icon" href="{{asset('public/assets/img/fav.jpg')}}">
-	<link href="{{BASE_URL}}public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{asset('public/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
 	<!-- Owl-carousel-CSS -->
-	<link href="{{BASE_URL}}public/css/owl.carousel.css" rel="stylesheet">
-	<link rel="stylesheet" href="{{BASE_URL}}public/css/team.css" type="text/css" media="all" />
-	<link href="{{BASE_URL}}public/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="{{asset('public/css/owl.carousel.css')}}" rel="stylesheet">
+	<link rel="stylesheet" href="{{asset('public/css/team.css')}}" type="text/css" media="all" />
+	<link href="{{asset('public/css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
 	<!-- font-awesome-icons -->
-	<link href="{{BASE_URL}}public/css/font-awesome.css" rel="stylesheet">
+	<link href="{{asset('public/css/font-awesome.css')}}" rel="stylesheet">
 	<!-- //font-awesome-icons -->
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">

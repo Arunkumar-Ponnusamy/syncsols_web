@@ -15,14 +15,14 @@
 				<div class="col-md-4 w3layouts_footer_grid">
 					<h3>Recent <span>Works</span></h3>
 					 <ul class="con_inner_text midimg">
-						<li><a href="#"><img src="{{BASE_URL}}public/images/banner22.jpg" alt="" class="img-responsive" /></a></li>
-					    <li><a href="#"><img src="{{BASE_URL}}public/images/banner33.jpg" alt="" class="img-responsive" /></a></li>
-						<li><a href="#"><img src="{{BASE_URL}}public/images/banner44.jpg" alt="" class="img-responsive" /></a></li>
-						<li><a href="#"><img src="{{BASE_URL}}public/images/banner11.jpg" alt="" class="img-responsive" /></a></li>
-						<li><a href="#"><img src="{{BASE_URL}}public/images/banner22.jpg" alt="" class="img-responsive" /></a></li>
-					    <li><a href="#"><img src="{{BASE_URL}}public/images/banner33.jpg" alt="" class="img-responsive" /></a></li>
-						 <li><a href="#"><img src="{{BASE_URL}}public/images/banner11.jpg" alt="" class="img-responsive" /></a></li>
-						<li><a href="#"><img src="{{BASE_URL}}public/images/banner44.jpg" alt="" class="img-responsive" /></a></li>
+						<li><a href="#"><img src="{{asset('public/images/banner22.jpg')}}" alt="" class="img-responsive" /></a></li>
+					    <li><a href="#"><img src="{{asset('public/images/banner33.jpg')}}" alt="" class="img-responsive" /></a></li>
+						<li><a href="#"><img src="{{asset('public/images/banner44.jpg')}}" alt="" class="img-responsive" /></a></li>
+						<li><a href="#"><img src="{{asset('public/images/banner11.jpg')}}" alt="" class="img-responsive" /></a></li>
+						<li><a href="#"><img src="{{asset('public/images/banner22.jpg')}}" alt="" class="img-responsive" /></a></li>
+					    <li><a href="#"><img src="{{asset('public/images/banner33.jpg')}}" alt="" class="img-responsive" /></a></li>
+						 <li><a href="#"><img src="{{asset('public/images/banner11.jpg')}}" alt="" class="img-responsive" /></a></li>
+						<li><a href="#"><img src="{{asset('public/images/banner44.jpg')}}" alt="" class="img-responsive" /></a></li>
 				     </ul>
 					
 				</div>
@@ -59,17 +59,17 @@
 	<!-- //footer -->
 
 	<!-- js -->
-	<script type="text/javascript" src="{{BASE_URL}}public/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="{{asset('public/js/jquery-2.1.4.min.js')}}"></script>
 	<!-- //js -->
 	<!-- stats -->
-	<script src="{{BASE_URL}}public/js/jquery.waypoints.min.js"></script>
-	<script src="{{BASE_URL}}public/js/jquery.countup.js"></script>
+	<script src="{{asset('public/js/jquery.waypoints.min.js')}}"></script>
+	<script src="{{asset('public/js/jquery.countup.js')}}"></script>
 	<script>
 		$('.counter').countUp();
 	</script>
 	<!-- //stats -->
 	<!-- Slider script -->
-	<script src="{{BASE_URL}}public/js/responsiveslides.min.js"></script>
+	<script src="{{asset('public/js/responsiveslides.min.js')}}"></script>
 	<script>
 		// You can also use "$(window).load(function() {"
 		$(function () {
@@ -83,7 +83,7 @@
 
 	<!-- /nav -->
 	<!-- requried-jsfiles-for owl -->
-	<script src="{{BASE_URL}}public/js/owl.carousel.js"></script>
+	<script src="{{asset('public/js/owl.carousel.js')}}"></script>
 	<script>
 		$(document).ready(function () {
 			$("#owl-demo2").owlCarousel({
@@ -98,11 +98,11 @@
 	</script>
 	<!-- //requried-jsfiles-for owl -->
 
-	<script src="{{BASE_URL}}public/js/modernizr-2.6.2.min.js"></script>
+	<script src="{{asset('public/js/modernizr-2.6.2.min.js')}}"></script>
 	<!-- //nav -->
 	<!-- js for portfolio lightbox -->
-	<script src="{{BASE_URL}}public/js/jquery.chocolat.js "></script>
-	<link rel="stylesheet " href="{{BASE_URL}}public/css/chocolat.css " type="text/css" media="all" />
+	<script src="{{asset('public/js/jquery.chocolat.js')}}"></script>
+	<link rel="stylesheet " href="{{asset('public/css/chocolat.css')}}" type="text/css" media="all" />
 	<!--light-box-files -->
 	<script type="text/javascript ">
 		$(function () {
@@ -112,7 +112,7 @@
 	<!-- /js for portfolio lightbox -->
 
 
-	<script type="text/javascript" src="{{BASE_URL}}public/js/bootstrap-3.1.1.min.js"></script>
+	<script type="text/javascript" src="{{asset('public/js/bootstrap-3.1.1.min.js')}}"></script>
 
 
 </body>
