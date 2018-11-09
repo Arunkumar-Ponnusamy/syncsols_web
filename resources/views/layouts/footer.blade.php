@@ -38,7 +38,7 @@
 				<div class="col-md-3 w3layouts_footer_grid">
 					<h2>Contact <span>Us</span></h2>
 					    <ul class="con_inner_text">
-							<li><span class="fa fa-map-marker" aria-hidden="true"></span>{{Setting::get('contact_address')}}<label> </label></li>
+							<li><span class="fa fa-map-marker" aria-hidden="true"></span>{!!Setting::get('contact_address')!!}<label> </label></li>
 							<li><span class="fa fa-envelope-o" aria-hidden="true"></span> <a href="">{{Setting::get('contact_email')}}</a></li>
 							<li><span class="fa fa-phone" aria-hidden="true"></span> {{Setting::get('contact_number')}}</li>
 						</ul>

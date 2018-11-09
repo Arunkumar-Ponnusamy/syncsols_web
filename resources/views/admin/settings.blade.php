@@ -163,9 +163,12 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Contact Address</label>
 <div class="col-sm-10">
-<textarea type="text" name="contact_address"  value="{{Setting::get('contact_address')}}" class="form-control" id="input-text" placeholder="Contact Address">{{Setting::get('contact_address')}}</textarea>
+<textarea type="text" name="contact_address"  value="{{Setting::get('contact_address')}}" class="form-control" id="myeditor" placeholder="Contact Address">{{Setting::get('contact_address')}}</textarea>
 </div>
 </div>
+</br>
+</br>
+</br>
 </br>
 </br>
 <div class="form-group">
@@ -182,6 +185,8 @@
 <input type="text" name="facebook" value="{{Setting::get('facebook')}}" class="form-control" id="input-text" placeholder="Facebook Link">
 </div>
 </div>
+</br>
+</br>
 </br>
 </br>
 <div class="form-group">
@@ -259,4 +264,24 @@
 <!-- Demo Specific JS Libraries -->
 <script src="{{asset('public/assets/js/admin/libs/prettify/prettify.js')}}"></script>
 <script src="{{asset('public/assets/js/admin/libs/dropzone/dropzone.min.js')}}"></script>
+<script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+<script type="text/javascript">
+    CKEDITOR.replace('myeditor');
+   $(document).ready(function(){
+    $("#cms-select").change(function(){
+        var types = $("#cms-select").val();
+        
+        $.ajaxSetup({
+                headers: { 'X-CSRF-TOKEN': $('meta[name="_toke-n"]').attr('content') }
+            });
+
+        $.ajax({url: "{{ url('admin/cms') }}/"+types, 
+            success: function(data) {
+                console.log(data);
+               CKEDITOR.instances["myeditor"].setData(data)
+            }});
+    });
+});
+    
+</script>
 @include('admin.include.footer')
