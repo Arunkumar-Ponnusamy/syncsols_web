@@ -31,7 +31,7 @@ class CreateSettingsTable extends Migration
 		{
 			$table->increments('id');
 			$table->string($this->keyColumn);
-			$table->text($this->valueColumn);
+			$table->text($this->valueColumn)->nullable();
 		});
 	}
 

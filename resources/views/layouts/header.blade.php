@@ -43,7 +43,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<h1><a class="navbar-brand" href="{{url('/')}}"> <img src="http://www.syncsols.com/demo/syncsols_web/public/assets/img/logo.png" style="width:150px;height:100%;"></a></h1>
+					<h1><a class="navbar-brand" href="{{url('/')}}"> <img src="{{img(Setting::get('site_logo'))}}" style="width:150px;height:100%;"></a></h1>
 
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
