@@ -70,5 +70,8 @@ class AdminController extends Controller {
         return view('web.service1');
     }
     
+    public function dropify() {
+        return view('admin.dropify');        
+    }
     
 }

@@ -1,120 +1,222 @@
-	<!-- footer -->
-	<div class="footer">
-		<div class="f-bg-w3l">
-				<div class="col-md-3 w3layouts_footer_grid">
-					<h2>Subscribe <span>Newsletter</span></h2>
-					<p>By subscribing to our mailing list you will always get latest news from us.</p>
-					<form action="#" method="post">
-						<input type="email" name="Email" placeholder="Enter your email..." required="">
-						<button class="btn1"><i class="fa fa-envelope-o" aria-hidden="true"></i></button>
-						<div class="clearfix"> </div>
+	<!--footer-->
+	<footer>
+		<div class="container">
+			<div class="row footer-top-w3layouts-agile">
+				<div class="col-lg-3 footer-grid" data-aos="zoom-in">
+					<div class="footer-title">
+						<h2>About Us</h2>
+					</div>
+					<div class="footer-text">
+						<p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. lacinia eget consectetur sed, convallis at tellus..</p>
+
+					</div>
+				</div>
+				<div class="col-lg-3 footer-grid" data-aos="zoom-in">
+					<div class="footer-title">
+						<h3>Contact Us</h3>
+					</div>
+					<div class="footer-office-hour">
+						<ul>
+							<li class="hd">Address :</li>
+							<li>No.27 - 5549436 street lorem ipsum, ipsum City, Country</li>
+
+						</ul>
+						<ul>
+							<li class="hd">Phone:+ 1 (234) 567 8901</li>
+							<li class="hd">Email:
+								<a href="mailto:info@example.com">info@example.com</a>
+							</li>
+							<li class="hd">Fax: 1(234) 567 8901</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 footer-grid" data-aos="zoom-in">
+					<div class="footer-title">
+						<h3>Recent Works</h3>
+					</div>
+					<div class="footer-list">
+						<div class="flickr-grid">
+							<a href="single.html">
+								<img src="{{asset('public/assets/new/images/g1.jpg')}}" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#">
+								<img src="{{asset('public/assets/new/images/g2.jpg')}}" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#">
+								<img src="{{asset('public/assets/new/images/g3.jpg')}}" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#">
+								<img src="{{asset('public/assets/new/images/g4.jpg')}}" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#">
+								<img src="{{asset('public/assets/new/images/g9.jpg')}}" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#">
+								<img src="{{asset('public/assets/new/images/g5.jpg')}}" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="single.html">
+								<img src="{{asset('public/assets/new/images/g6.jpg')}}" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#">
+								<img src="{{asset('public/assets/new/images/g7.jpg')}}" alt=" ">
+							</a>
+						</div>
+						<div class="flickr-grid">
+							<a href="#">
+								<img src="{{asset('public/assets/new/images/g8.jpg')}}" alt=" ">
+							</a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-lg-3 footer-grid" data-aos="zoom-in">
+					<div class="footer-title">
+						<h3>Subscribe</h3>
+					</div>
+					<p>Vivamus magna justo, lacinia eget consectetur sed.</p>
+					<form action="#" method="post" class="newsletter">
+						<input class="email" type="email" placeholder="Your email..." required="">
+						<button class="btn1">
+							<i class="far fa-envelope"></i>
+						</button>
 					</form>
-					
-				
-				</div>
-				<div class="col-md-4 w3layouts_footer_grid">
-					<h3>Recent <span>Works</span></h3>
-					 <ul class="con_inner_text midimg">
-						<li><a href="#"><img src="{{asset('public/images/banner22.jpg')}}" alt="" class="img-responsive" /></a></li>
-					    <li><a href="#"><img src="{{asset('public/images/banner33.jpg')}}" alt="" class="img-responsive" /></a></li>
-						<li><a href="#"><img src="{{asset('public/images/banner44.jpg')}}" alt="" class="img-responsive" /></a></li>
-						<li><a href="#"><img src="{{asset('public/images/banner11.jpg')}}" alt="" class="img-responsive" /></a></li>
-						<li><a href="#"><img src="{{asset('public/images/banner22.jpg')}}" alt="" class="img-responsive" /></a></li>
-					    <li><a href="#"><img src="{{asset('public/images/banner33.jpg')}}" alt="" class="img-responsive" /></a></li>
-						 <li><a href="#"><img src="{{asset('public/images/banner11.jpg')}}" alt="" class="img-responsive" /></a></li>
-						<li><a href="#"><img src="{{asset('public/images/banner44.jpg')}}" alt="" class="img-responsive" /></a></li>
-				     </ul>
-					
-				</div>
-				<div class="col-md-2 w3layouts_footer_grid">
-					<h3>Our <span>Links</span> </h3>
-					  <ul class="links">
-							<li><a href="{{url('/')}}">Home</a></li>
-							<li><a href="{{url('aboutus')}}">About</a></li>
-							<li><a href="{{'http://www.thelabview.com/'}}">Blog</a></li>
-							<li><a href="{{url('contact')}}">Mail Us</a></li>
-						</ul>
-				</div>
-				<div class="col-md-3 w3layouts_footer_grid">
-					<h2>Contact <span>Us</span></h2>
-					    <ul class="con_inner_text">
-							<li><span class="fa fa-map-marker" aria-hidden="true"></span>{!!Setting::get('contact_address')!!}<label> </label></li>
-							<li><span class="fa fa-envelope-o" aria-hidden="true"></span> <a href="">{{Setting::get('contact_email')}}</a></li>
-							<li><span class="fa fa-phone" aria-hidden="true"></span> {{Setting::get('contact_number')}}</li>
-						</ul>
-
-					<ul class="social_agileinfo">
-						<li><a href="{{Setting::get('facebook')}}" class="w3_facebook"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="{{Setting::get('twitter')}}" class="w3_twitter"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="{{Setting::get('instagram')}}" class="w3_instagram"><i class="fa fa-instagram"></i></a></li>
-						<li><a href="{{Setting::get('google')}}" class="w3_google"><i class="fa fa-google-plus"></i></a></li>
-					</ul>
+					<div class="clearfix"></div>
 				</div>
 
-
-				<div class="clearfix"> </div>
-					<p class="copyright">© 2018 Syncsols. All Rights Reserved | Design by <a href="http://syncsols.com/" target="_blank">syncsols</a></p>
 			</div>
-	</div>
-	<!-- //footer -->
 
+		</div>
+	</footer>
+	<!---->
+	<div class="copyright">
+		<div class="container">
+			<div class="copyrighttop" data-aos="fade-left">
+				<ul>
+					<li>
+						<h4>Follow us on:</h4>
+					</li>
+					<li>
+						<a class="facebook" href="#">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+					</li>
+					<li>
+						<a class="facebook" href="#">
+							<i class="fab fa-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a class="facebook" href="#">
+							<i class="fab fa-google-plus-g"></i>
+						</a>
+					</li>
+					<li>
+						<a class="facebook" href="#">
+							<i class="fab fa-pinterest-p"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="copyrightbottom" data-aos="fade-right">
+				<p>© 2018 Digital Biz. All Rights Reserved | Design by
+					<a href="http://w3layouts.com/">W3layouts</a>
+				</p>
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
 	<!-- js -->
-	<script type="text/javascript" src="{{asset('public/js/jquery-2.1.4.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('public/assets/new/js/jquery-2.2.3.min.js')}}"></script>
 	<!-- //js -->
+	<!-- simpleLightbox -->
+	<script src="{{asset('public/assets/new/js/simpleLightbox.js')}}"></script>
+	<script>
+		$('.proj_gallery_grid a').simpleLightbox();
+	</script>
+	<!-- //simpleLightbox -->
+	<!-- flexSlider -->
+	<script defer src="{{asset('public/assets/new/js/jquery.flexslider.js')}}"></script>
+	<script type="text/javascript">
+	 
+	  $(window).load(function(){
+		$('.flexslider').flexslider({
+		  animation: "slide",
+		  start: function(slider){
+			$('body').removeClass('loading');
+		  }
+		});
+	  });
+	</script>
+  
+	<!-- //flexSlider -->
+
 	<!-- stats -->
-	<script src="{{asset('public/js/jquery.waypoints.min.js')}}"></script>
-	<script src="{{asset('public/js/jquery.countup.js')}}"></script>
+	<script src="{{asset('public/assets/new/js/jquery.waypoints.min.js')}}"></script>
+	<script src="{{asset('public/assets/new/js/jquery.countup.js')}}"></script>
 	<script>
 		$('.counter').countUp();
 	</script>
 	<!-- //stats -->
-	<!-- Slider script -->
-	<script src="{{asset('public/js/responsiveslides.min.js')}}"></script>
-	<script>
-		// You can also use "$(window).load(function() {"
-		$(function () {
-			$("#slider").responsiveSlides({
-				auto: true,
-				nav: true,
-				manualControls: '#slider3-pager',
+	<!-- /js files -->
+	<link href="{{asset('public/assets/new/css/aos.css')}}" rel='stylesheet prefetch' type="text/css" media="all" />
+	<link href="{{asset('public/assets/new/css/aos-animation.css')}}" rel='stylesheet prefetch' type="text/css" media="all" />
+	<script src='js/aos.js'></script>
+	<script src="{{asset('public/assets/new/js/aosindex.js')}}"></script>
+	<!-- //js files -->
+	<!-- start-smoth-scrolling -->
+	<script type="text/javascript" src="{{asset('public/assets/new/js/move-top.js')}}"></script>
+	<script type="text/javascript" src="{{asset('public/assets/new/js/easing.js')}}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 900);
 			});
 		});
 	</script>
+	<!-- start-smoth-scrolling -->
 
-	<!-- /nav -->
-	<!-- requried-jsfiles-for owl -->
-	<script src="{{asset('public/js/owl.carousel.js')}}"></script>
-	<script>
+	<script type="text/javascript">
 		$(document).ready(function () {
-			$("#owl-demo2").owlCarousel({
-				items: 1,
-				lazyLoad: false,
-				autoPlay: true,
-				navigation: false,
-				navigationText: false,
-				pagination: true,
+			/*
+									var defaults = {
+							  			containerID: 'toTop', // fading element id
+										containerHoverID: 'toTopHover', // fading element hover id
+										scrollSpeed: 1200,
+										easingType: 'linear' 
+							 		};
+									*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
 			});
+
 		});
 	</script>
-	<!-- //requried-jsfiles-for owl -->
-
-	<script src="{{asset('public/js/modernizr-2.6.2.min.js')}}"></script>
-	<!-- //nav -->
-	<!-- js for portfolio lightbox -->
-	<script src="{{asset('public/js/jquery.chocolat.js')}}"></script>
-	<link rel="stylesheet " href="{{asset('public/css/chocolat.css')}}" type="text/css" media="all" />
-	<!--light-box-files -->
-	<script type="text/javascript ">
-		$(function () {
-			$('.portfolio-grids a').Chocolat();
-		});
-	</script>
-	<!-- /js for portfolio lightbox -->
-
-
-	<script type="text/javascript" src="{{asset('public/js/bootstrap-3.1.1.min.js')}}"></script>
+	<a href="#home" class="scroll" id="toTop" style="display: block;">
+		<span id="toTopHover" style="opacity: 1;"> </span>
+	</a>
+	<script type="text/javascript" src="{{asset('public/assets/new/js/bootstrap.min.js')}}"></script>
 
 
 </body>
+
 
 </html>

@@ -1,10 +1,30 @@
 	<script>
 		var resizefunc = [];
 	</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="{{asset('public/assets/dist/js/dropify.min.js')}}"></script>
+        <script>
+            $(document).ready(function(){
+                // Basic
+                $('.dropify').dropify();
+
+
+                // Used events
+                var drEvent = $('.dropify-event').dropify();
+
+                drEvent.on('dropify.beforeClear', function(event, element){
+                    return confirm("Do you really want to delete \"" + element.filename + "\" ?");
+                });
+
+                drEvent.on('dropify.afterClear', function(event, element){
+                    alert('File deleted');
+                });
+            });
+        </script>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="{{asset('public/assets/libs/jquery/jquery-1.11.1.min.js')}}"></script>
+<!-- 	<script src="{{asset('public/assets/libs/jquery/jquery-1.11.1.min.js')}}"></script>
 	<script src="{{asset('public/assets/libs/bootstrap/js/bootstrap.min.js')}}"></script>
-	<script src="{{asset('public/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js')}}"></script>
+	<script src="{{asset('public/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js')}}"></script> -->
 	<script src="{{asset('public/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js')}}"></script>
 	
 	<script src="{{asset('public/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js')}}"></script>
@@ -34,5 +54,4 @@
 	<script src="{{asset('public/assets/js/pages/calendar.js')}}"></script>
 	</body>
 
-<!-- Mirrored from themesground.com/nexus-admin/template/HTML/calendar.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Jan 2018 18:02:37 GMT -->
 </html>

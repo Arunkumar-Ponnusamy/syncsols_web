@@ -12,6 +12,9 @@
         <meta name="author" content="ThemesGround">
 
         <!-- Base Css Files -->
+        <link rel="stylesheet" href="{{asset('public/assets/dist/css/demo.css')}}">
+        <link rel="stylesheet" href="{{asset('public/assets/dist/css/dropify.min.css')}}">
+        <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
       <link rel="icon" href="{{asset('public/assets/img/fav.jpg')}}">
         <link href="{{asset('public/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css')}}" rel="stylesheet" />
         <link href="{{asset('public/assets/libs/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />

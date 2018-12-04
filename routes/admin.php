@@ -37,3 +37,4 @@ Route::get('/setting',    'AdminController@setting')->name('setting');
 
 Route::post('/setting',    'AdminController@update_setting')->name('setting');
 
+Route::get('/dropify',    'AdminController@dropify')->name('dropify');
