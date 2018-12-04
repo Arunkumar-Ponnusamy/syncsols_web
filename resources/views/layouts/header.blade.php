@@ -2,11 +2,10 @@
 <html>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-	<title>Digital Biz a Corporate Category Bootstrap responsive WebTemplate | Home :: w3layouts</title>
+	<title>SyncSols - A Web Automation Company</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<meta name="keywords" content="Digital Biz a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<meta name="keywords" content="SyncSols - A Web Automation Company" />
 
 	<script type="application/x-javascript">
 		addEventListener("load", function () {
@@ -59,8 +58,8 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 	<header>
 		<div class="header_top" id="home">
 			<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-				<a class="navbar-brand" href="index.html">
-					<i class="fab fa-digital-ocean"></i> Digital Biz</a>
+				<a class="navbar-brand" href="{{url('/')}}">
+					<img src="{{img(Setting::get('site_logo'))}}" style="width:100px;height:50%;"></a>
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 						aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
