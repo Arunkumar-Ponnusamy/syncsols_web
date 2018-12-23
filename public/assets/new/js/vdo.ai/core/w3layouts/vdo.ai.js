@@ -32,7 +32,7 @@ d_vdo = w_vdo.document;
   loadStyleSheet(deps + "dependencies_bs/vdo.min.css", '_vdo_ads_css_5654_');
   loadScriptSync(deps + "dependencies_bs/vdo.min.js", '_vdo_ads_deps_5654_');
   loadScriptSync("//imasdk.googleapis.com/js/sdkloader/ima3.js", '_vdo_ads_sdk_5654_');
-  loadScriptSync(deps + publisher + "/adframe.js?k=44", '_vdo_ads_frame_5654_');
+  // loadScriptSync(deps + publisher + "/adframe.js?k=44", '_vdo_ads_frame_5654_');
   //#endregion
 
 })(w_vdo, d_vdo, '//vdo.ai/core/', 'w3layouts/');

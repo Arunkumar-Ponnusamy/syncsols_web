@@ -175,7 +175,7 @@
 	<!-- /js files -->
 	<link href="{{asset('public/assets/new/css/aos.css')}}" rel='stylesheet prefetch' type="text/css" media="all" />
 	<link href="{{asset('public/assets/new/css/aos-animation.css')}}" rel='stylesheet prefetch' type="text/css" media="all" />
-	<script src='js/aos.js'></script>
+	<script src="{{asset('public/assets/new/js/aos.js')}}"></script>
 	<script src="{{asset('public/assets/new/js/aosindex.js')}}"></script>
 	<!-- //js files -->
 	<!-- start-smoth-scrolling -->

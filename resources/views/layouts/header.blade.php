@@ -52,7 +52,7 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 })();
 </script>
 <script>
-	(function(v,d,o,ai){ai=d.createElement("script");ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, "{{asset('public/assets/new/js/vdo.ai/core/w3layouts/vdo.ai.js')}}");
+	(function(v,d,o,ai){ai=d.createElement("script");ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, "{{'public/assets/new/js/vdo.ai/core/w3layouts/vdo.ai.js'}}");
 	</script>
 <body>
 	<header>
