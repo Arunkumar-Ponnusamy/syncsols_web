@@ -55,7 +55,7 @@
 							</div>
 							<div class="address-right">
 								<h6>Phone Number</h6>
-								<p>+1 234 567 8901,+1 234 567 8901</p>
+								<p>{{Setting::get('contact_number')}}</p>
 
 							</div>
 
@@ -69,7 +69,7 @@
 							<div class="address-right">
 								<h6>Email Address</h6>
 								<p>Email :
-									<a href="mailto:example@email.com"> mail@example.com</a>
+									<a href="mailto:{{Setting::get('contact_email')}}"> {{Setting::get('contact_email')}}</a>
 								</p>
 							</div>
 
@@ -82,7 +82,7 @@
 							</div>
 							<div class="address-right">
 								<h6>Location</h6>
-								<p>San Francisco California, USA
+								<p>{{Setting::get('contact_address')}}
 
 								</p>
 							</div>

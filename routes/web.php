@@ -83,7 +83,7 @@
          'services',
             [
                 'as'        =>  'showServicepage',
-                'uses'      =>  'WebController@showTestpage'
+                'uses'      =>  'WebController@showServices'
             ]
     );
 

@@ -172,14 +172,6 @@
 </br>
 </br>
 <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Site Logo</label>
-<div class="col-sm-10">
-<input type="file" name="site_logo" class="form-control" id="input-text" placeholder="Site Logo">
-</div>
-</div>
-</br>
-</br>
-<div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Facebook</label>
 <div class="col-sm-10">
 <input type="text" name="facebook" value="{{Setting::get('facebook')}}" class="form-control" id="input-text" placeholder="Facebook Link">
@@ -211,8 +203,19 @@
 <input type="text" name="google" value="{{Setting::get('google')}}" class="form-control" id="input-text" placeholder="Google">
 </div>
 </div>
+
+<div class="form-group">
+<label for="input-text" class="col-sm-2 control-label">Site Logo</label>
+<div class="col-sm-10">
+    @if(Setting::get('site_logo')!='')
+    <img style="height: 90px; margin-bottom: 15px; border-radius:1em;" src="{{img(Setting::get('site_logo'))}}">
+    @endif
+    <input type="file" name="site_logo" id="input-file-max-fs" class="dropify" data-max-file-size="2M" />
+</div>
+</div>
 </br>
 </br>
+
 <button type="submit" class="btn btn-default">Save	</button>
 
 <!--  -->
