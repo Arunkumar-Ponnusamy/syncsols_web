@@ -1,4 +1,5 @@
 @include('layouts.header')
+	<link href="{{asset('public/assets/new/css/contact.css')}}" rel='stylesheet' type='text/css' />
 	<!--/w3_short-->
 	<!--/banner-->
 	<div class="banner-inner">

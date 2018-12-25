@@ -63,6 +63,14 @@
             ]
     );
 
+    Route::get(
+         'test',
+            [
+                'as'        =>  'showTestpage',
+                'uses'      =>  'WebController@showTestpage'
+            ]
+    );
+
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');

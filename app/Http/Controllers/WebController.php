@@ -31,5 +31,9 @@ class WebController extends Controller {
         return view('web.service1');
     }
     
+    public function showTestpage() {
+        return view('web.test');
+    }
+    
     
 }

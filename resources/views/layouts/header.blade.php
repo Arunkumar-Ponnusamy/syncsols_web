@@ -2,10 +2,10 @@
 <html>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-	<title>SyncSols - A Web Automation Company</title>
+	<title>SyncSols - An Automation Company</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<meta name="keywords" content="SyncSols - A Web Automation Company" />
+	<meta name="keywords" content="SyncSols - An Automation Company" />
 
 	<script type="application/x-javascript">
 		addEventListener("load", function () {
@@ -16,6 +16,7 @@
 			window.scrollTo(0, 1);
 		}
 	</script>
+    <link rel="icon" href="{{asset('public/assets/img/fav.jpg')}}">
 	<link href="{{asset('public/assets/new/css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="{{asset('public/assets/new/css/flexslider.css')}}" type="text/css" media="screen" property="" />
 	<link href="{{asset('public/assets/new/css/style.css')}}" rel='stylesheet' type='text/css' />
@@ -67,7 +68,7 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mx-auto tp-nav">
 						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Home
+							<a class="nav-link" href="{{url('home')}}">Home
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
@@ -89,7 +90,7 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Contact</a>
+							<a class="nav-link" href="{{url('contact')}}">Contact</a>
 						</li>
 					</ul>
 					<form action="#" method="post" class="form-inline my-2 my-lg-0 search">
