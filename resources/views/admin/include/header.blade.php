@@ -303,7 +303,44 @@
     <li><a href="{{url('admin/dashboard')}}"><i class="fa fa-home"></i> <span>Dashboard</span> </a>
      
     </li>
-    <li><a href="{{url('admin/setting')}}"><i class="fa fa-home"></i> <span>Setting</span> </a>
+    <li class='has_sub'><a href='javascript:void(0);'><i class="fa fa-laptop"></i> <span>Home Page</span> 
+    
+    <span class="pull-right"><i class="fa fa-angle-down"></i></span> <span class="label label-primary pull-right">6</span></a>
+      <ul>
+        <li><a href="{{url('admin/banners')}}"><span>Banner</span></a></li>
+        <li><a href="{{url('admin/ourservices')}}"><span>Our Services</span></a></li>
+        <li><a href="{{url('admin/team')}}"><span>Team</span></a></li>
+        <li><a href="{{url('admin/works')}}"><span>Our Works</span></a></li>
+        <li><a href="{{url('admin/counts')}}"><span>Counts</span></a></li>
+        <li><a href="{{url('admin/testimonials')}}"><span>Testimonials</span></a></li>
+      </ul>
+    </li>
+
+    <li class='has_sub'><a href='javascript:void(0);'><i class="fa fa-question-circle"></i> <span>About Page</span> 
+    
+    <span class="pull-right"><i class="fa fa-angle-down"></i></span> <span class="label label-primary pull-right">1</span></a>
+      <ul>
+        <li><a href="{{url('admin/about')}}"><span>About</span></a></li>
+      </ul>
+    </li>
+
+    <li class='has_sub'><a href='javascript:void(0);'><i class="fa fa-product-hunt"></i> <span>Projects Page</span> 
+    
+    <span class="pull-right"><i class="fa fa-angle-down"></i></span> <span class="label label-primary pull-right">1</span></a>
+      <ul>
+        <li><a href="{{url('admin/projects')}}"><span>Project Detail</span></a></li>
+      </ul>
+    </li>
+
+    <li class='has_sub'><a href='javascript:void(0);'><i class="fa fa-life-ring"></i> <span>Services Page</span> 
+    
+    <span class="pull-right"><i class="fa fa-angle-down"></i></span> <span class="label label-primary pull-right">1</span></a>
+      <ul>
+        <li><a href="{{url('admin/services')}}"><span>Services Detail</span></a></li>
+      </ul>
+    </li>
+
+    <li><a href="{{url('admin/setting')}}"><i class="fa fa-cogs"></i> <span>Setting</span> </a>
      
     </li>
 <!--     <li class='has_sub'><a href='javascript:void(0);'><i class="fa fa-laptop"></i> <span>UI Elements</span> 

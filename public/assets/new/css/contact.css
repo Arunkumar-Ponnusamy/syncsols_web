@@ -136,6 +136,7 @@ body a {
 .address-info {
     padding: 2em 2em;
     background: #a3edf7;
+    height: 100%;
 }
 .address.row {
     width: 100%;

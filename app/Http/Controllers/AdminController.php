@@ -58,20 +58,41 @@ class AdminController extends Controller {
 
     }
 
-    public function showAbout() {
-        return view('web.about');
+    public function showBanners() {
+        return view('admin.banners');
     }
     
-    public function showService() {
-        return view('web.service');
-    }
-
-    public function showService1() {
-        return view('web.service1');
+    public function showOurServices() {
+        return view('admin.ourservices');
     }
     
-    public function dropify() {
-        return view('admin.dropify');        
+    public function showTeam() {
+        return view('admin.team');
     }
+    
+    public function showWorks() {
+        return view('admin.works');
+    }
+    
+    public function showCounts() {
+        return view('admin.counts');
+    }
+    
+    public function showTestimonials() {
+        return view('admin.testimonials');
+    }
+    
+    public function showAboutcontent() {
+        return view('admin.about');
+    }
+    
+    public function showProjects() {
+        return view('admin.projects');
+    }
+    
+    public function showServices() {
+        return view('admin.services');
+    }
+    
     
 }

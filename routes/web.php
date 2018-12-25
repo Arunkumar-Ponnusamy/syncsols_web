@@ -47,21 +47,21 @@
             ]
     );
 
-    Route::get(
-         'service',
-            [
-                'as'        =>  'showServicepage',
-                'uses'      =>  'WebController@showService'
-            ]
-    );
+    // Route::get(
+    //      'service',
+    //         [
+    //             'as'        =>  'showServicepage',
+    //             'uses'      =>  'WebController@showService'
+    //         ]
+    // );
 
-    Route::get(
-         'service1',
-            [
-                'as'        =>  'showService1page',
-                'uses'      =>  'WebController@showService1'
-            ]
-    );
+    // Route::get(
+    //      'service1',
+    //         [
+    //             'as'        =>  'showService1page',
+    //             'uses'      =>  'WebController@showService1'
+    //         ]
+    // );
 
     // Route::get(
     //      'test',

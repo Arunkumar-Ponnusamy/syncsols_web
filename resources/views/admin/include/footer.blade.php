@@ -22,9 +22,9 @@
             });
         </script>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!-- 	<script src="{{asset('public/assets/libs/jquery/jquery-1.11.1.min.js')}}"></script>
+	<!-- <script src="{{asset('public/assets/libs/jquery/jquery-1.11.1.min.js')}}"></script> -->
 	<script src="{{asset('public/assets/libs/bootstrap/js/bootstrap.min.js')}}"></script>
-	<script src="{{asset('public/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js')}}"></script> -->
+	<!-- <script src="{{asset('public/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js')}}"></script> -->
 	<script src="{{asset('public/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js')}}"></script>
 	
 	<script src="{{asset('public/assets/libs/jquery-animate-numbers/jquery.animateNumbers.js')}}"></script>

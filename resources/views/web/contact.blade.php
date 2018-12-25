@@ -82,7 +82,7 @@
 							</div>
 							<div class="address-right">
 								<h6>Location</h6>
-								<p>{{Setting::get('contact_address')}}
+								<p>{{Setting::get('contact_address1')}}<br/>{{Setting::get('contact_address2')}}
 
 								</p>
 							</div>
