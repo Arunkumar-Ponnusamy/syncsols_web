@@ -63,10 +63,26 @@
             ]
     );
 
+    // Route::get(
+    //      'test',
+    //         [
+    //             'as'        =>  'showTestpage',
+    //             'uses'      =>  'WebController@showTestpage'
+    //         ]
+    // );
+
     Route::get(
-         'test',
+         'projects',
             [
-                'as'        =>  'showTestpage',
+                'as'        =>  'showProjectpage',
+                'uses'      =>  'WebController@showProjectpage'
+            ]
+    );
+
+    Route::get(
+         'services',
+            [
+                'as'        =>  'showServicepage',
                 'uses'      =>  'WebController@showTestpage'
             ]
     );

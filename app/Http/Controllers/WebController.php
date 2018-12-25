@@ -35,5 +35,9 @@ class WebController extends Controller {
         return view('web.test');
     }
     
+    public function showProjectpage() {
+        return view('web.projects');
+    }
     
+
 }

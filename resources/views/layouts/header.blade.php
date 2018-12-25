@@ -20,6 +20,7 @@
 	<link href="{{asset('public/assets/new/css/bootstrap.css')}}" rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="{{asset('public/assets/new/css/flexslider.css')}}" type="text/css" media="screen" property="" />
 	<link href="{{asset('public/assets/new/css/style.css')}}" rel='stylesheet' type='text/css' />
+	<link href="{{asset('public/assets/new/css/blog.css')}}" type="text/css" rel="stylesheet" media="all">
 	<link href="{{asset('public/assets/new/css/simpleLightbox.css')}}" rel='stylesheet' type='text/css' />
 	<link href="{{asset('public/assets/new/css/fontawesome-all.css')}}" rel="stylesheet">
 	<link href="http://fonts.googleapis.com/css?family=Poppins:100i,200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
@@ -73,20 +74,23 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="about.html">About</a>
+							<a class="nav-link" href="{{url('aboutus')}}">About</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="blog.html">Blog</a>
+							<a class="nav-link" href="{{'http://www.thelabview.com/'}}">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{url('projects')}}">Projects</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 							    aria-expanded="false">
-								Dropdown
+								Services
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="project.html">Projects</a>
+								<a class="dropdown-item" href="{{url('services')}}">Service 1</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="error.html">Error Page</a>
+								<a class="dropdown-item" href="{{url('services')}}">Service 2</a>
 							</div>
 						</li>
 						<li class="nav-item">
