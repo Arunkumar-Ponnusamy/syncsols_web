@@ -46,6 +46,14 @@ Route::post('/setting',    'AdminController@update_setting')->name('setting');
     );
 
     Route::get(
+         'features',
+            [
+                'as'        =>  'showFeatures',
+                'uses'      =>  'AdminController@showFeatures'
+            ]
+    );
+
+    Route::get(
          'ourservices',
             [
                 'as'        =>  'showOurServices',

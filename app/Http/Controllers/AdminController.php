@@ -62,6 +62,10 @@ class AdminController extends Controller {
         return view('admin.banners');
     }
     
+    public function showFeatures() {
+        return view('admin.features');
+    }
+    
     public function showOurServices() {
         return view('admin.ourservices');
     }
