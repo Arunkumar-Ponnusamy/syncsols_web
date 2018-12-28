@@ -1,5 +1,9 @@
 @include('layouts.header')
-
+<style>
+.fiz_team_area {
+    padding: 100px 0px;
+}
+</style>
 	<!--/banner-->
 	<div class="banner">
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -182,7 +186,210 @@
 		</div>
 	</section>
 	<!-- //stats -->
-	<!--/services-->
+<section class="fiz_team_area">
+        <div class="container">
+            <div class="section_title_three text-center mb-60">
+                <h2><span>Our</span>Team</h2>
+            </div>
+            <div class="team_carousel owl-carousel owl-theme owl-loaded owl-responsive-600">
+                
+                
+                
+                
+                
+                
+                
+            <div class="owl-stage-outer"><div class="owl-stage" style="transition: all 0.25s ease 0s; width: 3960px; transform: translate3d(-1080px, 0px, 0px);"><div class="owl-item cloned" style="width: 360px; margin-right: 0px;"><div class="team_thumbnail">
+                    <div class="thumbnail_round_img">
+                        <img src="image/women-slide-img4.png" alt="">
+                    </div>
+                    <h4>Marissa Mayer</h4>
+                    <h6>Managing Director</h6>
+                    <hr>
+                    <div class="call_link">
+                        <div class="link-group">
+                            <i class="icon_phone"></i>
+                            <a class="link-black" href="tel:6095478964">+1 (609) 547–8964</a>
+                        </div>
+                        <div class="link-group">
+                            <i class="icon_mail"></i>
+                            <a class="link-black" href="mailto:dreemsthemes.org">info@dreemsthemes.org</a>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item cloned" style="width: 360px; margin-right: 0px;"><div class="team_thumbnail">
+                    <div class="thumbnail_round_img">
+                        <img src="image/women-slide-img4.png" alt="">
+                    </div>
+                    <h4>Marissa Mayer</h4>
+                    <h6>Managing Director</h6>
+                    <hr>
+                    <div class="call_link">
+                        <div class="link-group">
+                            <i class="icon_phone"></i>
+                            <a class="link-black" href="tel:6095478964">+1 (609) 547–8964</a>
+                        </div>
+                        <div class="link-group">
+                            <i class="icon_mail"></i>
+                            <a class="link-black" href="mailto:dreemsthemes.org">info@dreemsthemes.org</a>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item center" style="width: 360px; margin-right: 0px;"><div class="team_thumbnail">
+                    <div class="thumbnail_round_img">
+                        <img src="image/women-slide-img4.png" alt="">
+                    </div>
+                    <h4>Marissa Mayer</h4>
+                    <h6>Managing Director</h6>
+                    <hr>
+                    <div class="call_link">
+                        <div class="link-group">
+                            <i class="icon_phone"></i>
+                            <a class="link-black" href="tel:6095478964">+1 (609) 547–8964</a>
+                        </div>
+                        <div class="link-group">
+                            <i class="icon_mail"></i>
+                            <a class="link-black" href="mailto:dreemsthemes.org">info@dreemsthemes.org</a>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item active" style="width: 360px; margin-right: 0px;"><div class="team_thumbnail">
+                    <div class="thumbnail_round_img">
+                        <img src="image/women-slide-img4.png" alt="">
+                    </div>
+                    <h4>Marissa Mayer</h4>
+                    <h6>Managing Director</h6>
+                    <hr>
+                    <div class="call_link">
+                        <div class="link-group">
+                            <i class="icon_phone"></i>
+                            <a class="link-black" href="tel:6095478964">+1 (609) 547–8964</a>
+                        </div>
+                        <div class="link-group">
+                            <i class="icon_mail"></i>
+                            <a class="link-black" href="mailto:dreemsthemes.org">info@dreemsthemes.org</a>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item active" style="width: 360px; margin-right: 0px;"><div class="team_thumbnail">
+                    <div class="thumbnail_round_img">
+                        <img src="image/women-slide-img4.png" alt="">
+                    </div>
+                    <h4>Marissa Mayer</h4>
+                    <h6>Managing Director</h6>
+                    <hr>
+                    <div class="call_link">
+                        <div class="link-group">
+                            <i class="icon_phone"></i>
+                            <a class="link-black" href="tel:6095478964">+1 (609) 547–8964</a>
+                        </div>
+                        <div class="link-group">
+                            <i class="icon_mail"></i>
+                            <a class="link-black" href="mailto:dreemsthemes.org">info@dreemsthemes.org</a>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item" style="width: 360px; margin-right: 0px;"><div class="team_thumbnail">
+                    <div class="thumbnail_round_img">
+                        <img src="image/women-slide-img4.png" alt="">
+                    </div>
+                    <h4>Marissa Mayer</h4>
+                    <h6>Managing Director</h6>
+                    <hr>
+                    <div class="call_link">
+                        <div class="link-group">
+                            <i class="icon_phone"></i>
+                            <a class="link-black" href="tel:6095478964">+1 (609) 547–8964</a>
+                        </div>
+                        <div class="link-group">
+                            <i class="icon_mail"></i>
+                            <a class="link-black" href="mailto:dreemsthemes.org">info@dreemsthemes.org</a>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item" style="width: 360px; margin-right: 0px;"><div class="team_thumbnail">
+                    <div class="thumbnail_round_img">
+                        <img src="image/women-slide-img4.png" alt="">
+                    </div>
+                    <h4>Marissa Mayer</h4>
+                    <h6>Managing Director</h6>
+                    <hr>
+                    <div class="call_link">
+                        <div class="link-group">
+                            <i class="icon_phone"></i>
+                            <a class="link-black" href="tel:6095478964">+1 (609) 547–8964</a>
+                        </div>
+                        <div class="link-group">
+                            <i class="icon_mail"></i>
+                            <a class="link-black" href="mailto:dreemsthemes.org">info@dreemsthemes.org</a>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item" style="width: 360px; margin-right: 0px;"><div class="team_thumbnail">
+                    <div class="thumbnail_round_img">
+                        <img src="image/women-slide-img4.png" alt="">
+                    </div>
+                    <h4>Marissa Mayer</h4>
+                    <h6>Managing Director</h6>
+                    <hr>
+                    <div class="call_link">
+                        <div class="link-group">
+                            <i class="icon_phone"></i>
+                            <a class="link-black" href="tel:6095478964">+1 (609) 547–8964</a>
+                        </div>
+                        <div class="link-group">
+                            <i class="icon_mail"></i>
+                            <a class="link-black" href="mailto:dreemsthemes.org">info@dreemsthemes.org</a>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item" style="width: 360px; margin-right: 0px;"><div class="team_thumbnail">
+                    <div class="thumbnail_round_img">
+                        <img src="image/women-slide-img4.png" alt="">
+                    </div>
+                    <h4>Marissa Mayer</h4>
+                    <h6>Managing Director</h6>
+                    <hr>
+                    <div class="call_link">
+                        <div class="link-group">
+                            <i class="icon_phone"></i>
+                            <a class="link-black" href="tel:6095478964">+1 (609) 547–8964</a>
+                        </div>
+                        <div class="link-group">
+                            <i class="icon_mail"></i>
+                            <a class="link-black" href="mailto:dreemsthemes.org">info@dreemsthemes.org</a>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item cloned" style="width: 360px; margin-right: 0px;"><div class="team_thumbnail">
+                    <div class="thumbnail_round_img">
+                        <img src="image/women-slide-img4.png" alt="">
+                    </div>
+                    <h4>Marissa Mayer</h4>
+                    <h6>Managing Director</h6>
+                    <hr>
+                    <div class="call_link">
+                        <div class="link-group">
+                            <i class="icon_phone"></i>
+                            <a class="link-black" href="tel:6095478964">+1 (609) 547–8964</a>
+                        </div>
+                        <div class="link-group">
+                            <i class="icon_mail"></i>
+                            <a class="link-black" href="mailto:dreemsthemes.org">info@dreemsthemes.org</a>
+                        </div>
+                    </div>
+                </div></div><div class="owl-item cloned" style="width: 360px; margin-right: 0px;"><div class="team_thumbnail">
+                    <div class="thumbnail_round_img">
+                        <img src="image/women-slide-img4.png" alt="">
+                    </div>
+                    <h4>Marissa Mayer</h4>
+                    <h6>Managing Director</h6>
+                    <hr>
+                    <div class="call_link">
+                        <div class="link-group">
+                            <i class="icon_phone"></i>
+                            <a class="link-black" href="tel:6095478964">+1 (609) 547–8964</a>
+                        </div>
+                        <div class="link-group">
+                            <i class="icon_mail"></i>
+                            <a class="link-black" href="mailto:dreemsthemes.org">info@dreemsthemes.org</a>
+                        </div>
+                    </div>
+                </div></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style="display: none;">prev</div><div class="owl-next" style="display: none;">next</div></div><div class="owl-dots" style=""><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div></div>
+        </div>
+    </section>
+    	<!--/services-->
 	<section class="services">
 		<div class="container">
 			<!---728x90--->

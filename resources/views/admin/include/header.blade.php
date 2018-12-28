@@ -308,7 +308,8 @@
     <span class="pull-right"><i class="fa fa-angle-down"></i></span> <span class="label label-primary pull-right">6</span></a>
       <ul>
         <li><a href="{{url('admin/banners')}}"><span>Banner</span></a></li>
-        <li><a href="{{url('admin/ourservices')}}"><span>Our Services</span></a></li>
+        <li><a href="{{url('admin/features')}}"><span>Features</span></a></li>
+        <!-- <li><a href="{{url('admin/ourservices')}}"><span>Our Services</span></a></li> -->
         <li><a href="{{url('admin/team')}}"><span>Team</span></a></li>
         <li><a href="{{url('admin/works')}}"><span>Our Works</span></a></li>
         <li><a href="{{url('admin/counts')}}"><span>Counts</span></a></li>

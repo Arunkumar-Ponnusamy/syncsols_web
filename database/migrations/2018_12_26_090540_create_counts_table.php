@@ -15,6 +15,9 @@ class CreateCountsTable extends Migration
     {
         Schema::create('counts', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('fa-icon')->nullable();
+            $table->string('count')->nullable();
+            $table->string('count_type')->nullable();
             $table->timestamps();
         });
     }
