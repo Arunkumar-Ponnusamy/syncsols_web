@@ -16,7 +16,7 @@
 			<div class="carousel-inner" role="listbox">
 				<div class="carousel-item active">
 					<div class="carousel-caption">
-						<h3>Best Creative Agency for your needs</h3>
+						<h3>Best Creative Place for your needs</h3>
 
 						<div class="bnr-button">
 							<button type="button" class="btn btn-primary play" data-toggle="modal" data-target="#exampleModal">

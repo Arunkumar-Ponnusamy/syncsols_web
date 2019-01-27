@@ -4,7 +4,7 @@
 <!-- Mirrored from themesground.com/nexus-admin/template/HTML/calendar.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Jan 2018 18:02:33 GMT -->
 <head>
         <meta charset="UTF-8">
-        <title>Dashboard | Nexus - Responsive Bootstrap Admin Template</title>   
+        <title>SyncSols | Dashboard</title>   
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="description" content="">

@@ -126,7 +126,7 @@
 
 <div class="widget">
 <div class="widget-header transparent">
-<h2><strong>Site</strong> Settings</h2>
+<h2><strong>Features</strong> </h2>
 <div class="additional-btn">
 <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
 <!-- 							<a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
@@ -137,7 +137,7 @@
 <form action="{{url('admin/setting')}}" method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}                      
 <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Site Name</label>
+<label for="input-text" class="col-sm-2 control-label">FA Icon</label>
 <div class="col-sm-10">
 <input type="text" name="site_name" value="{{Setting::get('site_name')}}" class="form-control" id="input-text" placeholder="Site Name">
 </div>
