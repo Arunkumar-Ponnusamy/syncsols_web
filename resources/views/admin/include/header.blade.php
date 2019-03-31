@@ -72,7 +72,7 @@
 <div class="topbar">
     <div class="topbar-left">
       <div class="logo">
-            <h1><a href="{{url('admin/dashboard')}}"><img src="{{asset('public/assets/img/logo.png')}}" width=50%></a></h1>
+            <h1><a href="{{url('admin/dashboard')}}"><img src="{{asset('public/assets/img/logo.png')}}" width=75%></a></h1>
         </div>
        
     </div>
