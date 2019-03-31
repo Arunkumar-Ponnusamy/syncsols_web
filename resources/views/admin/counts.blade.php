@@ -126,7 +126,7 @@
 
 <div class="widget">
 <div class="widget-header transparent">
-<h2><strong>Site</strong> Settings</h2>
+<h2><strong>Counts</strong> Settings</h2>
 <div class="additional-btn">
 <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
 <!-- 							<a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
@@ -137,7 +137,7 @@
 <form action="{{url('admin/setting')}}" method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}                      
 <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Site Name</label>
+<label for="input-text" class="col-sm-2 control-label">FA Icon</label>
 <div class="col-sm-10">
 <input type="text" name="site_name" value="{{Setting::get('site_name')}}" class="form-control" id="input-text" placeholder="Site Name">
 </div>
@@ -145,7 +145,7 @@
 </br>
 </br>
 <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Contact Number</label>
+<label for="input-text" class="col-sm-2 control-label">Count</label>
 <div class="col-sm-10">
 <input type="text" name="contact_number" class="form-control" value="{{Setting::get('contact_number')}}" id="input-text" placeholder="Contact">
 </div>
@@ -153,79 +153,9 @@
 </br>
 </br>
 <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Contact Email</label>
+<label for="input-text" class="col-sm-2 control-label">Name</label>
 <div class="col-sm-10">
 <input type="text" name="contact_email" value="{{Setting::get('contact_email')}}" class="form-control" id="input-text" placeholder="Contact Email">
-</div>
-</div>
-</br>
-</br>
-<!-- <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Contact Address</label>
-<div class="col-sm-10">
-<textarea type="text" name="contact_address"  value="{{Setting::get('contact_address')}}" class="form-control" id="myeditor" placeholder="Contact Address">{{Setting::get('contact_address')}}</textarea>
-</div>
-</div>
- -->
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Contact Address line 1</label>
-<div class="col-sm-10">
-<textarea type="text" name="contact_address1"  value="{{Setting::get('contact_address1')}}" class="form-control" placeholder="Contact Address Line 1">{{Setting::get('contact_address1')}}</textarea>
-</div>
-</div>
-</br>
-</br>
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Contact Address line 2</label>
-<div class="col-sm-10">
-<textarea type="text" name="contact_address2"  value="{{Setting::get('contact_address2')}}" class="form-control" placeholder="Contact Address line 2">{{Setting::get('contact_address2')}}</textarea>
-</div>
-</div>
-</br>
-</br>
-</br>
-</br>
-</br>
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Facebook</label>
-<div class="col-sm-10">
-<input type="text" name="facebook" value="{{Setting::get('facebook')}}" class="form-control" id="input-text" placeholder="Facebook Link">
-</div>
-</div>
-</br>
-</br>
-</br>
-</br>
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Twitter</label>
-<div class="col-sm-10">
-<input type="text" name="twitter" value="{{Setting::get('twitter')}}" class="form-control" id="input-text" placeholder="Twitter">
-</div>
-</div>
-</br>
-</br>
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Instagram</label>
-<div class="col-sm-10">
-<input type="text" name="instagram" value="{{Setting::get('instagram')}}" class="form-control" id="input-text" placeholder="Instagram">
-</div>
-</div>
-</br>
-</br>
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Google</label>
-<div class="col-sm-10">
-<input type="text" name="google" value="{{Setting::get('google')}}" class="form-control" id="input-text" placeholder="Google">
-</div>
-</div>
-
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Site Logo</label>
-<div class="col-sm-10">
-    @if(Setting::get('site_logo')!='')
-    <img style="height: 90px; margin-bottom: 15px; border-radius:1em;" src="{{img(Setting::get('site_logo'))}}">
-    @endif
-    <input type="file" name="site_logo" id="input-file-max-fs" class="dropify" data-max-file-size="2M" />
 </div>
 </div>
 </br>
