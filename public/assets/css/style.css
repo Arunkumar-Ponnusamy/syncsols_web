@@ -1698,7 +1698,7 @@ iframe {
   position: relative;
   z-index: 1;
   width: 285px;
-  background: #006fa4;
+  background: aliceblue;
 }
 
 .topbar .topbar-left:before {
