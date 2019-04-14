@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     
-<!-- Mirrored from themesground.com/nexus-admin/template/HTML/calendar.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Jan 2018 18:02:33 GMT -->
 <head>
         <meta charset="UTF-8">
         <title>SyncSols | Dashboard</title>   
@@ -62,8 +61,8 @@
         <link rel="apple-touch-icon" sizes="120x120" href="{{asset('public/assets/img/apple-touch-icon-120x120.png')}}" />
         <link rel="apple-touch-icon" sizes="144x144" href="{{asset('public/assets/img/apple-touch-icon-144x144.png')}}" />
         <link rel="apple-touch-icon" sizes="152x152" href="{{asset('public/assets/img/apple-touch-icon-152x152.png')}}" />
-    </head>
-    <body class="fixed-left">
+</head>
+<body class="fixed-left">
         <!-- Modal Start -->
 	<!-- Begin page -->
 	<div id="wrapper">

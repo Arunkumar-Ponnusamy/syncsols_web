@@ -156,25 +156,37 @@
 </br>
 </br>
 <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Banner Video URL</label>
+<label for="input-text" class="col-sm-2 control-label">Enable Video</label>
 <div class="col-sm-10">
-<input type="text" name="video_url" class="form-control" value="{{Setting::get('contact_number')}}" id="input-text" placeholder="Contact">
-</div>
-</div>
-</br>
-</br>
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Banner Video</label>
-<div class="col-sm-10">
-    @if(Setting::get('image')!='')
-    <video style="height: 90px; margin-bottom: 15px; border-radius:1em;" src="{{img(Setting::get('image'))}}">
-    @endif
-    <input type="file" name="video" id="input-file-max-fs" class="dropify" data-max-file-size="50M" />
+<!-- Rounded switch -->
+<label class="switch">
+  <input class="form-control" id="enable_video" type="checkbox">
+  <span class="slider round"></span>
+</label>
 </div>
 </div>
 </br>
 </br>
 
+<div class="form-group video_url">
+<label for="input-text" class="col-sm-2 control-label">Banner Video URL</label>
+<div class="col-sm-10">
+<input type="text" name="video_url" class="form-control video_url" value="{{Setting::get('contact_number')}}" id="video_url" placeholder="Banner Video URL">
+</div>
+</div>
+</br>
+</br>
+<div class="form-group video">
+<label for="input-text" class="col-sm-2 control-label">Banner Video</label>
+<div class="col-sm-10">
+    @if(Setting::get('image')!='')
+    <video style="height: 90px; margin-bottom: 15px; border-radius:1em;" src="{{img(Setting::get('image'))}}">
+    @endif
+    <input type="file" name="video" id="input-file-max-fs" class="dropify video" data-max-file-size="50M" />
+</div>
+</div>
+</br>
+</br>
 
 <button type="submit" class="btn btn-default">Save	</button>
 
@@ -184,8 +196,6 @@
 
 </div>
 <!-- End of your awesome content -->
-
-
 </div>
 <!-- ============================================================== -->
 <!-- End content here -->

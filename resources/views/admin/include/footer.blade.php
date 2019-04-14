@@ -21,6 +21,20 @@
                 });
             });
         </script>
+	<script type="text/javascript">
+	$(".video_url").hide();
+	$(".video").hide();
+	$("#enable_video").change(function() {
+	    if(this.checked) {
+			$(".video_url").show();
+			$(".video").show();
+	    } else {
+			$(".video_url").hide();
+			$(".video").hide();
+	    }
+	});
+	</script>
+	    	
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<!-- <script src="{{asset('public/assets/libs/jquery/jquery-1.11.1.min.js')}}"></script> -->
 	<script src="{{asset('public/assets/libs/bootstrap/js/bootstrap.min.js')}}"></script>
