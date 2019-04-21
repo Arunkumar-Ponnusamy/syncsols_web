@@ -45,6 +45,30 @@
             ]
     );
 
+    Route::post(
+         'banners',
+            [
+                'as'        =>  'addBanners',
+                'uses'      =>  'AdminController@addBanners'
+            ]
+    );
+
+    Route::get(
+         'banners/{id}',
+            [
+                'as'        =>  'editBanners',
+                'uses'      =>  'AdminController@editBanners'
+            ]
+    );
+
+    Route::post(
+         'banners/{id}',
+            [
+                'as'        =>  'updateBanners',
+                'uses'      =>  'AdminController@updateBanners'
+            ]
+    );
+
     Route::get(
          'features',
             [

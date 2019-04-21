@@ -61,6 +61,8 @@
         <link rel="apple-touch-icon" sizes="120x120" href="{{asset('public/assets/img/apple-touch-icon-120x120.png')}}" />
         <link rel="apple-touch-icon" sizes="144x144" href="{{asset('public/assets/img/apple-touch-icon-144x144.png')}}" />
         <link rel="apple-touch-icon" sizes="152x152" href="{{asset('public/assets/img/apple-touch-icon-152x152.png')}}" />
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body class="fixed-left">
         <!-- Modal Start -->

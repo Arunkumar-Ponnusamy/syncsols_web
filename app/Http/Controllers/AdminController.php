@@ -4,6 +4,7 @@ use DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 use App\Admin;
+use App\Banner;
 use App\Settings;
 use Setting;
 
@@ -59,7 +60,49 @@ class AdminController extends Controller {
     }
 
     public function showBanners() {
-        return view('admin.banners');
+        $banners = Banner::all();
+        return view('admin.banners',compact('banners'));
+    }
+    
+    public function addBanners(Request $request) {
+    $banner = $request->all();
+    try {
+        if($request->hasFile('image')) 
+            $banner['image'] = $request->image->store('banner/images');
+        if($request->hasFile('video'))
+            $banner['video'] = $request->video->store('banner/videos');
+        if($banner['position']=='' || $banner['position']=='0')
+            $banner['postion'] = count(Banner::all())+1;
+
+        Banner::create($banner);        
+        return redirect()->back()->with('flash_success','Banner Added');
+    }
+    catch(Exception $e) {
+        // dd($e);
+        return redirect()->back()->with('flash_error',$e->getMessage());
+    }
+    }
+    
+    public function editBanners(Request $request, $id) {
+        $banner = Banner::find($id);
+        return view('admin.edit-banners',compact('banner'));
+    }
+    
+    public function updateBanners(Request $request, $id) {
+    $banner = $request->except('_token');
+        if($request->hasFile('image')) 
+            $banner['image'] = $request->image->store('banner/images');
+        if($request->hasFile('video'))
+            $banner['video'] = $request->video->store('banner/videos');
+    try {
+        Banner::where('id', $id)->update($banner);
+        $banners = Banner::all();
+            return redirect('admin/banners')->with('flash_success','Banner Updated!');
+    }
+    catch(Exception $e) {
+        // dd($e);
+        return redirect()->back()->with('flash_error',$e->getMessage());
+    }
     }
     
     public function showFeatures() {

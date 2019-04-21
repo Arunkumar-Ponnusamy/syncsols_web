@@ -1,7 +1,6 @@
 	<script>
 		var resizefunc = [];
 	</script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="{{asset('public/assets/dist/js/dropify.min.js')}}"></script>
         <script>
             $(document).ready(function(){
@@ -22,21 +21,15 @@
             });
         </script>
 	<script type="text/javascript">
-	$(".video_url").hide();
-	$(".video").hide();
-	$("#enable_video").change(function() {
-	    if(this.checked) {
-			$(".video_url").show();
-			$(".video").show();
-	    } else {
-			$(".video_url").hide();
-			$(".video").hide();
-	    }
-	});
+	$(document).ready( function () {
+	    $('#table_id').DataTable();
+	} );
+		
 	</script>
 	    	
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<!-- <script src="{{asset('public/assets/libs/jquery/jquery-1.11.1.min.js')}}"></script> -->
+
 	<script src="{{asset('public/assets/libs/bootstrap/js/bootstrap.min.js')}}"></script>
 	<!-- <script src="{{asset('public/assets/libs/jqueryui/jquery-ui-1.10.4.custom.min.js')}}"></script> -->
 	<script src="{{asset('public/assets/libs/jquery-ui-touch/jquery.ui.touch-punch.min.js')}}"></script>
@@ -66,6 +59,7 @@
     <!-- Page Specific JS Libraries -->
 	<script src="{{asset('public/assets/libs/fullcalendar/fullcalendar.min.js')}}"></script>
 	<script src="{{asset('public/assets/js/pages/calendar.js')}}"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>	
 	</body>
 
 </html>

@@ -17,6 +17,10 @@ class Banner extends Model
         'image',
         'banner_text',
         'video_link',
+        'video',
+        'enable_video',
+        'video_choice_toggle',
+        'position'
     ];
 
     /**

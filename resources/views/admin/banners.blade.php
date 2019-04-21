@@ -6,123 +6,6 @@
 <!-- ============================================================== -->
 <div class="content">
 							
-<!-- Your awesome content goes here -->
-<div class="row">
-
-<!-- 					<div class="col-sm-6 portlets">
-
-<div class="widget">
-<div class="widget-header transparent">
-<h2><strong>Default</strong> Form</h2>
-<div class="additional-btn">
-<a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
-<a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
-<a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
-</div>
-</div>
-<div class="widget-content padding">							
-<div id="basic-form">
-<form role="form">
-  <div class="form-group">
-	<label for="exampleInputEmail1">Email address</label>
-	<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-  </div>
-  <div class="form-group">
-	<label for="exampleInputPassword1">Password</label>
-	<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group">
-	<input type="file" class="btn btn-default" title="Search for a file to add">
-	<p class="help-block">Example block-level help text here.</p>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
-</div>
-</div>
-</div>
-
-</div>
--->					
-<!-- 					<div class="col-sm-6 portlets">
-
-<div class="widget">
-<div class="widget-header transparent">
-<h2><strong>Horizontal</strong> Form</h2>
-<div class="additional-btn">
-<a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
-<a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
-<a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
-</div>
-</div>
-<div class="widget-content padding">						
-<div id="horizontal-form">
-<form class="form-horizontal" role="form">
-  <div class="form-group">
-	<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-	<div class="col-sm-10">
-	  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-	  <p class="help-block">Example block-level help text here.</p>
-	</div>
-  </div>
-  <div class="form-group">
-	<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-	<div class="col-sm-10">
-	  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-	</div>
-  </div>
-  <div class="form-group">
-	<div class="col-sm-offset-2 col-sm-10">
-	  <div class="checkbox">
-		<label>
-		  <input type="checkbox"> Remember me
-		</label>
-	  </div>
-	</div>
-  </div>
-  <div class="form-group">
-	<div class="col-sm-offset-2 col-sm-10">
-	  <button type="submit" class="btn btn-default">Sign in</button>
-	</div>
-  </div>
-</form>
-</div>
-</div>
-</div>
-
-</div>
--->					
-</div>
-
-<!-- 				<div class="widget">
-<div class="widget-header transparent">
-<h2><strong>Inline</strong> Form</h2>
-<div class="additional-btn">
-<a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
-<a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
-<a href="#" class="widget-close"><i class="icon-cancel-3"></i></a>
-</div>
-</div>
-<div class="widget-content padding">
-<form class="form-inline" role="form">
-<div class="form-group">
-<label class="sr-only" for="exampleInputEmail2">Email address</label>
-<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-</div>
-<div class="form-group">
-<label class="sr-only" for="exampleInputPassword2">Password</label>
-<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-</div>
-<div class="checkbox">
-<label>
-<input type="checkbox"> Remember me
-</label>
-</div>
-<button type="submit" class="btn btn-default">Sign in</button>
-<a class="btn btn-primary md-trigger" data-modal="form-modal">Form in Modal</a>
-</form>
-</div>
-</div>
--->				
 
 <div class="widget">
 <div class="widget-header transparent">
@@ -133,66 +16,88 @@
 <a href="#" class="widget-close"><i class="icon-cancel-3"></i></a> -->
 </div>
 </div>
-<div class="widget-content padding">
-<form action="{{url('admin/setting')}}" method="POST" enctype="multipart/form-data">
-{{ csrf_field() }}                      
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Banner Text</label>
-<div class="col-sm-10">
-<input type="text" name="banner_text" value="{{Setting::get('banner_text')}}" class="form-control" id="input-text" placeholder="Banner Text">
-</div>
-</div>
-</br>
-</br>
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Banner Image</label>
-<div class="col-sm-10">
-    @if(Setting::get('image')!='')
-    <img style="height: 90px; margin-bottom: 15px; border-radius:1em;" src="{{img(Setting::get('image'))}}">
-    @endif
-    <input type="file" name="image" id="input-file-max-fs" class="dropify" data-max-file-size="10M" />
-</div>
-</div>
-</br>
-</br>
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Enable Video</label>
-<div class="col-sm-10">
-<!-- Rounded switch -->
-<label class="switch">
-  <input class="form-control" id="enable_video" type="checkbox">
-  <span class="slider round"></span>
-</label>
-</div>
-</div>
-</br>
-</br>
+    <div class="widget-content padding">
+    <form action="{{url('admin/banners')}}" method="POST" enctype="multipart/form-data">
+    {{ csrf_field() }}                      
+    <div class="form-group">
+    <label for="input-text" class="col-sm-2 control-label">Banner Text</label>
+    <div class="col-sm-10">
+    <input type="text" name="banner_text" value="" class="form-control" id="input-text" placeholder="Banner Text">
+    </div>
+    </div>
+    </br>
+    </br>
+    <div class="form-group">
+    <label for="input-text" class="col-sm-2 control-label">Banner Image</label>
+    <div class="col-sm-10">
+<!--         @if(Setting::get('image')!='')
+        <img style="height: 90px; margin-bottom: 15px; border-radius:1em;" src="{{img(Setting::get('image'))}}">
+        @endif -->
+        <input type="file" name="image" id="input-file-max-fs" class="dropify" data-max-file-size="10M" />
+    </div>
+    </div>
+    </br>
+    </br>
+    <div class="form-group">
+    <label for="input-text" class="col-sm-2 control-label">Enable Video</label>
+    <div class="col-sm-10">
+    <!-- Rounded switch -->
+    <label class="switch">
+      <input class="form-control" id="enable_video" name="enable_video" type="checkbox" value="1">
+      <span class="slider round"></span>
+    </label>
+    </div>
+    </div>
+    </br>
+    </br>
 
-<div class="form-group video_url">
-<label for="input-text" class="col-sm-2 control-label">Banner Video URL</label>
-<div class="col-sm-10">
-<input type="text" name="video_url" class="form-control video_url" value="{{Setting::get('contact_number')}}" id="video_url" placeholder="Banner Video URL">
-</div>
-</div>
-</br>
-</br>
-<div class="form-group video">
-<label for="input-text" class="col-sm-2 control-label">Banner Video</label>
-<div class="col-sm-10">
-    @if(Setting::get('image')!='')
-    <video style="height: 90px; margin-bottom: 15px; border-radius:1em;" src="{{img(Setting::get('image'))}}">
-    @endif
-    <input type="file" name="video" id="input-file-max-fs" class="dropify video" data-max-file-size="50M" />
-</div>
-</div>
-</br>
-</br>
+    <div class="form-group video_choice_toggle">
+    <label for="input-text" class="col-sm-2 control-label">Video Choice</label>
+    <div class="col-sm-10">
+    <select name="video_choice_toggle" class="form-control video_choice_toggle" value="" id="video_choice_toggle">
+      <option value="video_url">Video URL</option>
+      <option value="video_file">Video File</option>
+    </select>
+    </div>
+    </div>
+    </br>
+    </br>
 
-<button type="submit" class="btn btn-default">Save	</button>
+    <div class="form-group video_link">
+    <label for="input-text" class="col-sm-2 control-label">Banner Video URL</label>
+    <div class="col-sm-10">
+    <input type="text" name="video_link" class="form-control video_link" value="" id="video_link" placeholder="Banner Video URL">
+    </div>
+    </div>
+    </br>
+    </br>
 
-<!--  -->
-</form>
-</div>
+    <div class="form-group video">
+    <label for="input-text" class="col-sm-2 control-label">Banner Video</label>
+    <div class="col-sm-10">
+<!--         @if(Setting::get('image')!='')
+        <video style="height: 90px; margin-bottom: 15px; border-radius:1em;" src="{{img(Setting::get('image'))}}">
+        @endif -->
+        <input type="file" name="video" id="input-file-max-fs" class="dropify video" data-max-file-size="50M" />
+    </div>
+    </div>
+    </br>
+    </br>
+
+    <div class="form-group position">
+    <label for="input-text" class="col-sm-2 control-label">Banner Position</label>
+    <div class="col-sm-10">
+    <input type="number" name="position" class="form-control position" value="" id="position" placeholder="Banner Position">
+    </div>
+    </div>
+    </br>
+    </br>
+
+    <button type="submit" class="btn btn-default">Save	</button>
+
+    <!--  -->
+    </form>
+    </div>
 
 </div>
 <!-- End of your awesome content -->
@@ -201,6 +106,40 @@
 <!-- End content here -->
 <!-- ============================================================== -->
 
+</div>
+
+<div class="content-page">
+<div class="content">
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Banner Text</th>
+                <th>Banner Image</th>
+                <th>Banner Position</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+          @foreach($banners as $index=>$banner)
+            <tr>
+                <td>{{$index+1}}</td>
+                <td>{{$banner->banner_text}}</td>
+                <td><img src="{{img($banner->image)}}" width="50"></td>
+                <td>{{$banner->position}}</td>
+                <td>
+                                <form action="{{''}}" method="POST">
+                                    {{ csrf_field() }}
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <a href="{{url('admin/banners/'.$banner->id)}}" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
+                                    <button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> Delete</button>
+                                </form>                  
+                </td>
+            </tr>
+          @endforeach
+        </tbody>
+    </table>
+</div>
 </div>
 <!-- End right content -->
 
@@ -238,6 +177,33 @@
 <script src="{{asset('public/assets/js/admin/libs/prettify/prettify.js')}}"></script>
 <script src="{{asset('public/assets/js/admin/libs/dropzone/dropzone.min.js')}}"></script>
 <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+<script type="text/javascript">
+  $(".video_link").hide();
+  $(".video").hide();
+  $(".video_choice_toggle").hide();
+  $("#enable_video").change(function() {
+      if(this.checked) {
+      $(".video_link").show();
+      // $(".video").show();
+      $(".video_choice_toggle").show();
+      } else {
+      $(".video_link").hide();
+      $(".video").hide();
+      $(".video_choice_toggle").hide();
+      }
+  });
+  $("#video_choice_toggle").change(function() {
+      if($("#video_choice_toggle").val()=='video_link') {
+      
+      $(".video_link").show();
+      $(".video").hide();
+      } else if($("#video_choice_toggle").val()=='video_file') {
+      $(".video_link").hide();
+      $(".video").show();
+      }
+  });
+  
+</script>
 <script type="text/javascript">
     CKEDITOR.replace('myeditor');
    $(document).ready(function(){

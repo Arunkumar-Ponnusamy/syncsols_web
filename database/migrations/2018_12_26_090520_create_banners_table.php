@@ -19,8 +19,9 @@ class CreateBannersTable extends Migration
             $table->text('banner_text')->nullable();
             $table->string('video_link')->nullable();
             $table->text('video')->nullable();
-            $table->integer('video_toggle')->nullable();
-            $table->enum('video_choice_toggle')->nullable();
+            $table->integer('enable_video')->default(0);
+            $table->enum('video_choice_toggle',['video_url','video_file'])->nullable();
+            $table->integer('position')->default(0);
             $table->timestamps();
         });
     }
