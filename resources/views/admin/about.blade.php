@@ -134,13 +134,13 @@
 </div>
 </div>
 <div class="widget-content padding">
-<form action="{{url('admin/setting')}}" method="POST" enctype="multipart/form-data">
+<form action="{{url('admin/abouts')}}" method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}                      
 
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Content</label>
 <div class="col-sm-10">
-<textarea type="text" id="myeditor" name="contact_address1"  value="{{Setting::get('contact_address1')}}" class="form-control" placeholder="Contact Address Line 1">{{Setting::get('contact_address1')}}</textarea>
+<textarea type="text" id="myeditor" name="content"  value="" class="form-control" placeholder="Content"></textarea>
 </div>
 </div>
 </br>
@@ -161,6 +161,29 @@
 <!-- End content here -->
 <!-- ============================================================== -->
 
+</div>
+<div class="content-page">
+<div class="content">
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+          @foreach($abouts as $index=>$about)
+            <tr>
+                <td>{{$index+1}}</td>
+                <td>
+                                    <a href="{{url('admin/abouts/'.$about->id)}}" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
+                                    <a href="{{url('admin/abouts/delete/'.$about->id)}}"><button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> Delete</button></a>
+                </td>
+            </tr>
+          @endforeach
+        </tbody>
+    </table>
+</div>
 </div>
 <!-- End right content -->
 

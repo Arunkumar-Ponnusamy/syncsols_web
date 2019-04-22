@@ -14,9 +14,9 @@ class Count extends Model
      **/
     protected $fillable = [
         'id',
-        'fa-icon',
+        'fa_icon',
         'count',
-        'count_type',
+        'name',
     ];
 
     /**

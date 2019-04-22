@@ -126,7 +126,7 @@
 
 <div class="widget">
 <div class="widget-header transparent">
-<h2><strong>Our</strong> Works</h2>
+<h2><strong>Counts</strong> Settings</h2>
 <div class="additional-btn">
 <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
 <!-- 							<a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
@@ -134,48 +134,32 @@
 </div>
 </div>
 <div class="widget-content padding">
-<form action="{{url('admin/works')}}" method="POST" enctype="multipart/form-data">
-{{ csrf_field() }}   
-
+<form action="{{url('admin/counts/'.$count->id)}}" method="POST" enctype="multipart/form-data">
+{{ csrf_field() }}                      
 <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Picture</label>
+<label for="input-text" class="col-sm-2 control-label">FA Icon</label>
 <div class="col-sm-10">
-    <!-- @if(Setting::get('site_logo')!='')
-    <img style="height: 90px; margin-bottom: 15px; border-radius:1em;" src="{{img(Setting::get('site_logo'))}}">
-    @endif -->
-    <input type="file" name="picture" id="input-file-max-fs" class="dropify" data-max-file-size="2M" />
+<input type="text" name="fa_icon" value="{{$count->fa_icon}}" class="form-control" id="input-text" placeholder="FA Icon">
 </div>
 </div>
 </br>
 </br>
-
 <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Header Text</label>
+<label for="input-text" class="col-sm-2 control-label">Count</label>
 <div class="col-sm-10">
-<input type="text" name="header_text" value="" class="form-control" id="input-text" placeholder="Header Text">
+<input type="text" name="count" class="form-control" value="{{$count->count}}" id="input-text" placeholder="Count">
 </div>
 </div>
 </br>
 </br>
-
 <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Short Description</label>
+<label for="input-text" class="col-sm-2 control-label">Name</label>
 <div class="col-sm-10">
-<textarea type="text" name="short_description"  value="" class="form-control" placeholder="Short Description"></textarea>
+<input type="text" name="name" value="{{$count->name}}" class="form-control" id="input-text" placeholder="Name">
 </div>
 </div>
 </br>
 </br>
-
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Description</label>
-<div class="col-sm-10">
-<textarea type="text" name="description"  value="" class="form-control" placeholder="Description"></textarea>
-</div>
-</div>
-</br>
-</br>
-
 
 <button type="submit" class="btn btn-default">Save	</button>
 
@@ -192,35 +176,6 @@
 <!-- End content here -->
 <!-- ============================================================== -->
 
-</div>
-<div class="content-page">
-<div class="content">
-    <table id="table_id" class="display">
-        <thead>
-            <tr>
-                <th>No.</th>
-                <th>Header Text</th>
-                <th>Picture</th>
-                <th>Short Description</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-          @foreach($works as $index=>$work)
-            <tr>
-                <td>{{$index+1}}</td>
-                <td>{{$work->header_text}}</td>
-                <td><img src="{{img($work->picture)}}" width="50"></td>
-                <td>{{$work->short_description}}</td>
-                <td>
-                                    <a href="{{url('admin/works/'.$work->id)}}" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
-                                    <a href="{{url('admin/works/delete/'.$work->id)}}"><button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> Delete</button></a>
-                </td>
-            </tr>
-          @endforeach
-        </tbody>
-    </table>
-</div>
 </div>
 <!-- End right content -->
 

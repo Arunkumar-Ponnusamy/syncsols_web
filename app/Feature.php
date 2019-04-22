@@ -14,9 +14,10 @@ class Feature extends Model
      */
     protected $fillable = [
         'id',
-        'fa-image',
+        'fa_icon',
         'highlight_text',
-        'description',
+        'small_description',
+        'full_description',
     ];
 
     /**

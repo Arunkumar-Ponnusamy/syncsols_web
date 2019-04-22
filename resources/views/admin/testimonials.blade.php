@@ -124,6 +124,7 @@
 </div>
 -->				
 
+
 <div class="widget">
 <div class="widget-header transparent">
 <h2><strong>Testimonials</strong> Section</h2>
@@ -134,12 +135,12 @@
 </div>
 </div>
 <div class="widget-content padding">
-<form action="{{url('admin/setting')}}" method="POST" enctype="multipart/form-data">
+<form action="{{url('admin/testimonials')}}" method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}                      
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Name</label>
 <div class="col-sm-10">
-<input type="text" name="site_name" value="{{Setting::get('site_name')}}" class="form-control" id="input-text" placeholder="Site Name">
+<input type="text" name="name" value="" class="form-control" id="input-text" placeholder="Name">
 </div>
 </div>
 </br>
@@ -147,10 +148,10 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Display Picture</label>
 <div class="col-sm-10">
-    @if(Setting::get('site_logo')!='')
+<!--     @if(Setting::get('site_logo')!='')
     <img style="height: 90px; margin-bottom: 15px; border-radius:1em;" src="{{img(Setting::get('site_logo'))}}">
-    @endif
-    <input type="file" name="site_logo" id="input-file-max-fs" class="dropify" data-max-file-size="2M" />
+    @endif -->
+    <input type="file" name="display_picture" id="input-file-max-fs" class="dropify" data-max-file-size="2M" />
 </div>
 </div>
 </br>
@@ -159,7 +160,7 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Country</label>
 <div class="col-sm-10">
-<input type="text" name="contact_email" value="{{Setting::get('contact_email')}}" class="form-control" id="input-text" placeholder="Contact Email">
+<input type="text" name="country" value="" class="form-control" id="input-text" placeholder="Country">
 </div>
 </div>
 </br>
@@ -168,7 +169,7 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Review</label>
 <div class="col-sm-10">
-<textarea type="text" name="contact_address1"  value="{{Setting::get('contact_address1')}}" class="form-control" placeholder="Contact Address Line 1">{{Setting::get('contact_address1')}}</textarea>
+<textarea type="text" name="review"  value="" class="form-control" placeholder="Review"></textarea>
 </div>
 </div>
 </br>
@@ -176,7 +177,7 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Facebook Profile</label>
 <div class="col-sm-10">
-<input type="text" name="facebook" value="{{Setting::get('facebook')}}" class="form-control" id="input-text" placeholder="Facebook Link">
+<input type="text" name="facebook" value="" class="form-control" id="input-text" placeholder="Facebook Profile">
 </div>
 </div>
 </br>
@@ -186,7 +187,7 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Twitter Profile</label>
 <div class="col-sm-10">
-<input type="text" name="twitter" value="{{Setting::get('twitter')}}" class="form-control" id="input-text" placeholder="Twitter">
+<input type="text" name="twitter" value="" class="form-control" id="input-text" placeholder="Twitter">
 </div>
 </div>
 </br>
@@ -194,7 +195,7 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Dripple Profile</label>
 <div class="col-sm-10">
-<input type="text" name="instagram" value="{{Setting::get('instagram')}}" class="form-control" id="input-text" placeholder="Instagram">
+<input type="text" name="dripple" value="" class="form-control" id="input-text" placeholder="Dripple">
 </div>
 </div>
 </br>
@@ -215,6 +216,35 @@
 <!-- End content here -->
 <!-- ============================================================== -->
 
+</div>
+<div class="content-page">
+<div class="content">
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Display Picture</th>
+                <th>Review</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+          @foreach($testimonials as $index=>$testimonial)
+            <tr>
+                <td>{{$index+1}}</td>
+                <td>{{$testimonial->name}}</td>
+                <td><img src="{{img($testimonial->display_picture)}}" width="50"></td>
+                <td>{{$testimonial->review}}</td>
+                <td>
+                                    <a href="{{url('admin/testimonials/'.$testimonial->id)}}" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
+                                    <a href="{{url('admin/testimonials/delete/'.$testimonial->id)}}"><button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> Delete</button></a>
+                </td>
+            </tr>
+          @endforeach
+        </tbody>
+    </table>
+</div>
 </div>
 <!-- End right content -->
 

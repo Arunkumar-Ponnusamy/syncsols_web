@@ -4,23 +4,20 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Team extends Model
+class Project extends Model
 {
-    //
+    
     /**
      * The attributes that are mass assignable.
      *
      * @var array
-     */
+     **/
     protected $fillable = [
         'id',
-        'name',
-        'designation',
-        'position',
-        'display_picture',
-        'facebook',
-        'twitter',
-        'linkedin',
+        'picture',
+        'header_text',
+        'short_description',
+        'description',
     ];
 
     /**

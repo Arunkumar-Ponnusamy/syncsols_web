@@ -134,12 +134,12 @@
 </div>
 </div>
 <div class="widget-content padding">
-<form action="{{url('admin/setting')}}" method="POST" enctype="multipart/form-data">
+<form action="{{url('admin/services')}}" method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}                      
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Service Name</label>
 <div class="col-sm-10">
-<input type="text" name="site_name" value="{{Setting::get('site_name')}}" class="form-control" id="input-text" placeholder="Site Name">
+<input type="text" name="service_name" value="" class="form-control" id="input-text" placeholder="Service Name">
 </div>
 </div>
 </br>
@@ -147,7 +147,7 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Content</label>
 <div class="col-sm-10">
-<textarea type="text" id="myeditor" name="contact_address1"  value="{{Setting::get('contact_address1')}}" class="form-control" placeholder="Contact Address Line 1">{{Setting::get('contact_address1')}}</textarea>
+<textarea type="text" id="myeditor" name="content"  value="" class="form-control" placeholder="Content"></textarea>
 </div>
 </div>
 </br>
@@ -169,6 +169,32 @@
 <!-- ============================================================== -->
 
 </div>
+<div class="content-page">
+<div class="content">
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Service Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+          @foreach($services as $index=>$service)
+            <tr>
+                <td>{{$index+1}}</td>
+                <td>{{$service->service_name}}</td>
+                <td>
+                                    <a href="{{url('admin/services/'.$service->id)}}" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
+                                    <a href="{{url('admin/services/delete/'.$service->id)}}"><button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> Delete</button></a>
+                </td>
+            </tr>
+          @endforeach
+        </tbody>
+    </table>
+</div>
+</div>
+
 <!-- End right content -->
 
 </div>

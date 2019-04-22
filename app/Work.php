@@ -14,11 +14,10 @@ class Work extends Model
      **/
     protected $fillable = [
         'id',
-        'name',
-        'image',
-        'position',
-        'phone',
-        'email',
+        'picture',
+        'header_text',
+        'short_description',
+        'description',
     ];
 
     /**

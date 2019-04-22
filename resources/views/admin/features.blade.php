@@ -134,12 +134,12 @@
 </div>
 </div>
 <div class="widget-content padding">
-<form action="{{url('admin/setting')}}" method="POST" enctype="multipart/form-data">
+<form action="{{url('admin/features')}}" method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}                      
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">FA Icon</label>
 <div class="col-sm-10">
-<input type="text" name="fa_icon" value="{{Setting::get('site_name')}}" class="form-control" id="input-text" placeholder="FA Icon">
+<input type="text" name="fa_icon" value="" class="form-control" id="input-text" placeholder="FA Icon">
 </div>
 </div>
 </br>
@@ -147,7 +147,7 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Highlight Text</label>
 <div class="col-sm-10">
-<input type="text" name="highlight_text" class="form-control" value="{{Setting::get('contact_number')}}" id="input-text" placeholder="Highlight Text">
+<input type="text" name="highlight_text" class="form-control" value="" id="input-text" placeholder="Highlight Text">
 </div>
 </div>
 </br>
@@ -155,7 +155,7 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Small Description</label>
 <div class="col-sm-10">
-<input type="text" name="small_description" class="form-control" value="{{Setting::get('contact_number')}}" id="input-text" placeholder="Small Description">
+<input type="text" name="small_description" class="form-control" value="" id="input-text" placeholder="Small Description">
 </div>
 </div>
 </br>
@@ -163,7 +163,7 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Full Description</label>
 <div class="col-sm-10">
-<textarea type="text" name="full_description"  value="{{Setting::get('contact_address1')}}" class="form-control" id="myeditor" placeholder="Full Description">{{Setting::get('contact_address1')}}</textarea>
+<textarea type="text" name="full_description"  value="" class="form-control" id="myeditor" placeholder="Full Description"></textarea>
 </div>
 </div>
 </br>
@@ -184,6 +184,35 @@
 <!-- End content here -->
 <!-- ============================================================== -->
 
+</div>
+<div class="content-page">
+<div class="content">
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>FA Icon</th>
+                <th>Highlight Text</th>
+                <th>Small Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+          @foreach($features as $index=>$feature)
+            <tr>
+                <td>{{$index+1}}</td>
+                <td><img src="{{img($feature->fa_icon)}}" width="50"></td>
+                <td>{{$feature->highlight_text}}</td>
+                <td>{{$feature->small_description}}</td>
+                <td>
+                                    <a href="{{url('admin/features/'.$feature->id)}}" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
+                                    <a href="{{url('admin/features/delete/'.$feature->id)}}"><button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> Delete</button></a>
+                </td>
+            </tr>
+          @endforeach
+        </tbody>
+    </table>
+</div>
 </div>
 <!-- End right content -->
 

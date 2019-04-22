@@ -128,12 +128,8 @@
                 <td><img src="{{img($banner->image)}}" width="50"></td>
                 <td>{{$banner->position}}</td>
                 <td>
-                                <form action="{{''}}" method="POST">
-                                    {{ csrf_field() }}
-                                    <input type="hidden" name="_method" value="DELETE">
                                     <a href="{{url('admin/banners/'.$banner->id)}}" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
-                                    <button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> Delete</button>
-                                </form>                  
+                                    <a href="{{url('admin/banners/delete/'.$banner->id)}}"><button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> Delete</button></a>
                 </td>
             </tr>
           @endforeach

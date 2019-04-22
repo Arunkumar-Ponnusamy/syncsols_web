@@ -134,12 +134,12 @@
 </div>
 </div>
 <div class="widget-content padding">
-<form action="{{url('admin/setting')}}" method="POST" enctype="multipart/form-data">
+<form action="{{url('admin/counts')}}" method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}                      
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">FA Icon</label>
 <div class="col-sm-10">
-<input type="text" name="site_name" value="{{Setting::get('site_name')}}" class="form-control" id="input-text" placeholder="Site Name">
+<input type="text" name="fa_icon" value="" class="form-control" id="input-text" placeholder="FA Icon">
 </div>
 </div>
 </br>
@@ -147,7 +147,7 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Count</label>
 <div class="col-sm-10">
-<input type="text" name="contact_number" class="form-control" value="{{Setting::get('contact_number')}}" id="input-text" placeholder="Contact">
+<input type="text" name="count" class="form-control" value="" id="input-text" placeholder="Count">
 </div>
 </div>
 </br>
@@ -155,7 +155,7 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Name</label>
 <div class="col-sm-10">
-<input type="text" name="contact_email" value="{{Setting::get('contact_email')}}" class="form-control" id="input-text" placeholder="Contact Email">
+<input type="text" name="name" value="" class="form-control" id="input-text" placeholder="Name">
 </div>
 </div>
 </br>
@@ -176,6 +176,33 @@
 <!-- End content here -->
 <!-- ============================================================== -->
 
+</div>
+<div class="content-page">
+<div class="content">
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Count</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+          @foreach($counts as $index=>$count)
+            <tr>
+                <td>{{$index+1}}</td>
+                <td>{{$count->name}}</td>
+                <td>{{$count->count}}</td>
+                <td>
+                                    <a href="{{url('admin/counts/'.$count->id)}}" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
+                                    <a href="{{url('admin/counts/delete/'.$count->id)}}"><button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> Delete</button></a>
+                </td>
+            </tr>
+          @endforeach
+        </tbody>
+    </table>
+</div>
 </div>
 <!-- End right content -->
 

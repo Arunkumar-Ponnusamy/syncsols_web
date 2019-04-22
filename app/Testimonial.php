@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Team extends Model
+class Testimonial extends Model
 {
     //
     /**
@@ -15,12 +15,12 @@ class Team extends Model
     protected $fillable = [
         'id',
         'name',
-        'designation',
-        'position',
         'display_picture',
+        'country',
+        'review',
         'facebook',
         'twitter',
-        'linkedin',
+        'dripple',
     ];
 
     /**

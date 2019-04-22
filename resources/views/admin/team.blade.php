@@ -126,7 +126,7 @@
 
 <div class="widget">
 <div class="widget-header transparent">
-<h2><strong>Site</strong> Settings</h2>
+<h2><strong>Team</strong> Members</h2>
 <div class="additional-btn">
 <a href="#" class="hidden reload"><i class="icon-ccw-1"></i></a>
 <!-- 							<a href="#" class="widget-toggle"><i class="icon-down-open-2"></i></a>
@@ -134,62 +134,48 @@
 </div>
 </div>
 <div class="widget-content padding">
-<form action="{{url('admin/setting')}}" method="POST" enctype="multipart/form-data">
+<form action="{{url('admin/teams')}}" method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}                      
 <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Site Name</label>
+<label for="input-text" class="col-sm-2 control-label">Name</label>
 <div class="col-sm-10">
-<input type="text" name="site_name" value="{{Setting::get('site_name')}}" class="form-control" id="input-text" placeholder="Site Name">
+<input type="text" name="name" value="" class="form-control" id="input-text" placeholder="Name">
 </div>
 </div>
 </br>
 </br>
 <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Contact Number</label>
+<label for="input-text" class="col-sm-2 control-label">Position</label>
 <div class="col-sm-10">
-<input type="text" name="contact_number" class="form-control" value="{{Setting::get('contact_number')}}" id="input-text" placeholder="Contact">
+<input type="number" name="position" class="form-control" value="" id="input-text" placeholder="Position">
 </div>
 </div>
 </br>
 </br>
 <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Contact Email</label>
+<label for="input-text" class="col-sm-2 control-label">Designation</label>
 <div class="col-sm-10">
-<input type="text" name="contact_email" value="{{Setting::get('contact_email')}}" class="form-control" id="input-text" placeholder="Contact Email">
-</div>
-</div>
-</br>
-</br>
-<!-- <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Contact Address</label>
-<div class="col-sm-10">
-<textarea type="text" name="contact_address"  value="{{Setting::get('contact_address')}}" class="form-control" id="myeditor" placeholder="Contact Address">{{Setting::get('contact_address')}}</textarea>
-</div>
-</div>
- -->
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Contact Address line 1</label>
-<div class="col-sm-10">
-<textarea type="text" name="contact_address1"  value="{{Setting::get('contact_address1')}}" class="form-control" placeholder="Contact Address Line 1">{{Setting::get('contact_address1')}}</textarea>
+<input type="text" name="designation" class="form-control" value="" id="input-text" placeholder="Designation">
 </div>
 </div>
 </br>
 </br>
 <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Contact Address line 2</label>
+<label for="input-text" class="col-sm-2 control-label">Display Picture</label>
 <div class="col-sm-10">
-<textarea type="text" name="contact_address2"  value="{{Setting::get('contact_address2')}}" class="form-control" placeholder="Contact Address line 2">{{Setting::get('contact_address2')}}</textarea>
+<!--     @if(Setting::get('site_logo')!='')
+    <img style="height: 90px; margin-bottom: 15px; border-radius:1em;" src="{{img(Setting::get('site_logo'))}}">
+    @endif -->
+    <input type="file" name="display_picture" id="input-file-max-fs" class="dropify" data-max-file-size="2M" />
 </div>
 </div>
 </br>
 </br>
-</br>
-</br>
-</br>
+
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Facebook</label>
 <div class="col-sm-10">
-<input type="text" name="facebook" value="{{Setting::get('facebook')}}" class="form-control" id="input-text" placeholder="Facebook Link">
+<input type="text" name="facebook" value="" class="form-control" id="input-text" placeholder="Facebook Link">
 </div>
 </div>
 </br>
@@ -199,33 +185,15 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Twitter</label>
 <div class="col-sm-10">
-<input type="text" name="twitter" value="{{Setting::get('twitter')}}" class="form-control" id="input-text" placeholder="Twitter">
+<input type="text" name="twitter" value="" class="form-control" id="input-text" placeholder="Twitter">
 </div>
 </div>
 </br>
 </br>
 <div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Instagram</label>
+<label for="input-text" class="col-sm-2 control-label">Linkedin</label>
 <div class="col-sm-10">
-<input type="text" name="instagram" value="{{Setting::get('instagram')}}" class="form-control" id="input-text" placeholder="Instagram">
-</div>
-</div>
-</br>
-</br>
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Google</label>
-<div class="col-sm-10">
-<input type="text" name="google" value="{{Setting::get('google')}}" class="form-control" id="input-text" placeholder="Google">
-</div>
-</div>
-
-<div class="form-group">
-<label for="input-text" class="col-sm-2 control-label">Site Logo</label>
-<div class="col-sm-10">
-    @if(Setting::get('site_logo')!='')
-    <img style="height: 90px; margin-bottom: 15px; border-radius:1em;" src="{{img(Setting::get('site_logo'))}}">
-    @endif
-    <input type="file" name="site_logo" id="input-file-max-fs" class="dropify" data-max-file-size="2M" />
+<input type="text" name="linkedin" value="" class="form-control" id="input-text" placeholder="Linkedin">
 </div>
 </div>
 </br>
@@ -246,6 +214,37 @@
 <!-- End content here -->
 <!-- ============================================================== -->
 
+</div>
+<div class="content-page">
+<div class="content">
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Display Picture</th>
+                <th>Designation</th>
+                <th>Position</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+          @foreach($teams as $index=>$team)
+            <tr>
+                <td>{{$index+1}}</td>
+                <td>{{$team->name}}</td>
+                <td><img src="{{img($team->display_picture)}}" width="50"></td>
+                <td>{{$team->designation}}</td>
+                <td>{{$team->position}}</td>
+                <td>
+                                    <a href="{{url('admin/teams/'.$team->id)}}" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
+                                    <a href="{{url('admin/teams/delete/'.$team->id)}}"><button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> Delete</button></a>
+                </td>
+            </tr>
+          @endforeach
+        </tbody>
+    </table>
+</div>
 </div>
 <!-- End right content -->
 
