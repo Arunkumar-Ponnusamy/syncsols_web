@@ -2,6 +2,8 @@
 namespace App\Http\Controllers;
 use DB;
 use Illuminate\Support\Facades\Input;
+use App\Settings;
+use Setting;
 
 class WebController extends Controller {
 
@@ -12,7 +14,11 @@ class WebController extends Controller {
 //    }
     
     public function showHome() {
-        return view('web.index');
+        if(Setting::get('DEMO_MODE') == '1') {
+            return view('web.syncsols_temp');
+        } else {
+            return view('web.index');
+        }
     }
     
     public function showAbout() {

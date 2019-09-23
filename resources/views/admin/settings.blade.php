@@ -230,6 +230,18 @@
 </div>
 </br>
 </br>
+<div class="form-group">
+<label for="input-text" class="col-sm-2 control-label">Demo Mode</label>
+<div class="col-sm-10">
+<!-- Rounded switch -->
+<label class="switch">
+  <input class="form-control" id="demo_mode" name="DEMO_MODE" type="checkbox" @if(Setting::get('DEMO_MODE')==1){{'checked'}}@endif value="1">
+  <span class="slider round"></span>
+</label>
+</div>
+</div>
+</br>
+</br>
 
 <button type="submit" class="btn btn-default">Save	</button>
 
