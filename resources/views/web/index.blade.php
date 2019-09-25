@@ -3,30 +3,78 @@
 .fiz_team_area {
     padding: 100px 0px;
 }
+
+@foreach($banners as $key=>$banner)
+@if($key==0)
+.carousel-item {
+    background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{'storage/app/'.$banner->image}}) no-repeat;
+    background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{'storage/app/'.$banner->image}}) no-repeat;
+    background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{'storage/app/'.$banner->image}}) no-repeat;
+    background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{'storage/app/'.$banner->image}}) no-repeat;
+    background-size: cover;
+}
+@else
+.carousel-item.item{{$key+1}} {
+    background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{'storage/app/'.$banner->image}}) no-repeat;
+    background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{'storage/app/'.$banner->image}}) no-repeat;
+    background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{'storage/app/'.$banner->image}}) no-repeat;
+    background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url({{'storage/app/'.$banner->image}}) no-repeat;
+    background-size: cover;
+}
+@endif
+@endforeach
+/*.carousel-item.item2 {
+    background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner2.jpg) no-repeat;
+    background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner2.jpg) no-repeat;
+    background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner2.jpg) no-repeat;
+    background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner2.jpg) no-repeat;
+    background-size: cover;
+}
+
+.carousel-item.item3 {
+    background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner3.jpg) no-repeat;
+    background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner3.jpg) no-repeat;
+    background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner3.jpg) no-repeat;
+    background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner3.jpg) no-repeat;
+    background-size: cover;
+}
+
+.carousel-item.item4 {
+    background: -webkit-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner4.jpg) no-repeat;
+    background: -moz-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner4.jpg) no-repeat;
+    background: -ms-linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner4.jpg) no-repeat;
+    background: linear-gradient(rgba(23, 22, 23, 0.2), rgba(23, 22, 23, 0.5)), url(../images/banner4.jpg) no-repeat;
+    background-size: cover;
+}
+*/
+
 </style>
 	<!--/banner-->
 	<div class="banner">
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
-				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                @foreach($banners as $key=>$banner)
+                <li data-target="#carouselExampleIndicators" data-slide-to="{{$key}}" class="@if($key==0){{'active'}}@endif"></li>
+                @endforeach
 			</ol>
 			<div class="carousel-inner" role="listbox">
-				<div class="carousel-item active">
+                @foreach($banners as $key=>$banner)
+				<div class="carousel-item @if($key==0){{'active'}}@else{{'item'.($key+1)}}@endif">
 					<div class="carousel-caption">
-						<h3>Best Creative Place for your needs</h3>
+						<h3>{{$banner->banner_text}}</h3>
 
+                        @if($banner->enable_video==1)
 						<div class="bnr-button">
 							<button type="button" class="btn btn-primary play" data-toggle="modal" data-target="#exampleModal">
 								<i class="fas fa-play"></i>
 							</button>
 						</div>
+                        @endif
 
 					</div>
 				</div>
-				<div class="carousel-item item2">
+                @endforeach
+<!-- 				<div class="carousel-item item2">
 					<div class="carousel-caption">
 						<h3>We Deliver Quality Projects.</h3>
 
@@ -60,7 +108,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+ -->			</div>
 			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="sr-only">Previous</span>

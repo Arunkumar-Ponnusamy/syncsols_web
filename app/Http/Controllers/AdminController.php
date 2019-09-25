@@ -60,6 +60,10 @@ class AdminController extends Controller {
             if($key=='site_logo') {
                 $value = $request->site_logo->store('site');
             }
+            if(!$request->DEMO_MODE) {
+                $key = 'DEMO_MODE';
+                $value = 0;
+            }
             Setting::set($key, $value);
             Setting::save();
         }

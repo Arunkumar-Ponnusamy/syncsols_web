@@ -4,6 +4,16 @@ use DB;
 use Illuminate\Support\Facades\Input;
 use App\Settings;
 use Setting;
+use App\Admin;
+use App\Banner;
+use App\Feature;
+use App\Team;
+use App\Work;
+use App\Count;
+use App\Testimonial;
+use App\About;
+use App\Project;
+use App\Service;
 
 class WebController extends Controller {
 
@@ -17,7 +27,8 @@ class WebController extends Controller {
         if(Setting::get('DEMO_MODE') == '1') {
             return view('web.syncsols_temp');
         } else {
-            return view('web.index');
+            $banners = Banner::all();
+            return view('web.index',compact('banners'));
         }
     }
     
