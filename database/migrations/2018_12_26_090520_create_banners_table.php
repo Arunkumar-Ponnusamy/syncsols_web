@@ -17,6 +17,7 @@ class CreateBannersTable extends Migration
             $table->increments('id');
             $table->string('image')->nullable();
             $table->text('banner_text')->nullable();
+            $table->string('video_caption')->nullable();
             $table->string('video_link')->nullable();
             $table->text('video')->nullable();
             $table->integer('enable_video')->default(0);

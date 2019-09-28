@@ -63,6 +63,15 @@
     </br>
     </br>
 
+    <div class="form-group video_caption">
+    <label for="input-text" class="col-sm-2 control-label">Video Caption</label>
+    <div class="col-sm-10">
+    <input type="text" name="video_caption" class="form-control video_caption" value="" id="video_caption" placeholder="Video Caption">
+    </div>
+    </div>
+    </br>
+    </br>
+
     <div class="form-group video_link">
     <label for="input-text" class="col-sm-2 control-label">Banner Video URL</label>
     <div class="col-sm-10">
@@ -128,8 +137,8 @@
                 <td><img src="{{img($banner->image)}}" width="50"></td>
                 <td>{{$banner->position}}</td>
                 <td>
-                                    <a href="{{url('admin/banners/'.$banner->id)}}" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
-                                    <a href="{{url('admin/banners/delete/'.$banner->id)}}"><button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> Delete</button></a>
+                  <a href="{{url('admin/banners/'.$banner->id)}}" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
+                  <a href="{{url('admin/banners/delete/'.$banner->id)}}"><button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> Delete</button></a>
                 </td>
             </tr>
           @endforeach
@@ -177,19 +186,22 @@
   $(".video_link").hide();
   $(".video").hide();
   $(".video_choice_toggle").hide();
+  $(".video_caption").hide();
   $("#enable_video").change(function() {
       if(this.checked) {
       $(".video_link").show();
       // $(".video").show();
       $(".video_choice_toggle").show();
+      $(".video_caption").show();
       } else {
       $(".video_link").hide();
       $(".video").hide();
       $(".video_choice_toggle").hide();
+      $(".video_caption").hide();
       }
   });
   $("#video_choice_toggle").change(function() {
-      if($("#video_choice_toggle").val()=='video_link') {
+      if($("#video_choice_toggle").val()=='video_url') {
       
       $(".video_link").show();
       $(".video").hide();

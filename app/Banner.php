@@ -16,6 +16,7 @@ class Banner extends Model
         'id',
         'image',
         'banner_text',
+        'video_caption',
         'video_link',
         'video',
         'enable_video',

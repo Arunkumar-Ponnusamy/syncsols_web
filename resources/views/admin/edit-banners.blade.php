@@ -52,6 +52,15 @@
     </br>
     </br>
 
+    <div class="form-group video_caption">
+    <label for="input-text" class="col-sm-2 control-label">Video Caption</label>
+    <div class="col-sm-10">
+    <input type="text" name="video_caption" class="form-control video_caption" value="{{$banner->video_caption}}" id="video_caption" placeholder="Video Caption">
+    </div>
+    </div>
+    </br>
+    </br>
+
     <div class="form-group video_choice_toggle">
     <label for="input-text" class="col-sm-2 control-label">Video Choice</label>
     <div class="col-sm-10">
@@ -185,7 +194,7 @@
       }
   });
   $("#video_choice_toggle").change(function() {
-      if($("#video_choice_toggle").val()=='video_link') {
+      if($("#video_choice_toggle").val()=='video_url') {
       
       $(".video_link").show();
       $(".video").hide();
