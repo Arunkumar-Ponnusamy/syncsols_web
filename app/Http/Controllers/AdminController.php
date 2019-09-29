@@ -150,16 +150,16 @@ class AdminController extends Controller {
     }
     
     public function updateFeatures(Request $request, $id) {
-    $feature = $request->except('_token');
-    try {
-        Feature::where('id', $id)->update($feature);
-        $features = Feature::all();
+        $feature = $request->except('_token');
+        try {
+            Feature::where('id', $id)->update($feature);
+            $features = Feature::all();
             return redirect('admin/features')->with('flash_success','Feature Updated!');
-    }
-    catch(Exception $e) {
-        // dd($e);
-        return redirect()->back()->with('flash_error',$e->getMessage());
-    }
+        }
+        catch(Exception $e) {
+            // dd($e);
+            return redirect()->back()->with('flash_error',$e->getMessage());
+        }
     }
     
     public function deleteFeatures(Request $request, $id) {
@@ -181,9 +181,14 @@ class AdminController extends Controller {
     public function addTeams(Request $request) {
     $team = $request->except('_token');
     try {
-
+        if(Team::all()->count()<4) {
+        if($request->hasFile('display_picture')) 
+            $team['display_picture'] = $request->display_picture->store('team/images');
         Team::create($team);        
         return redirect()->back()->with('flash_success','Team Added');
+        } else {
+        return redirect()->back()->with('flash_error','Maximum Entries Exceeded');
+        }
     }
     catch(Exception $e) {
         // dd($e);
@@ -199,6 +204,8 @@ class AdminController extends Controller {
     public function updateTeams(Request $request, $id) {
     $team = $request->except('_token');
     try {
+        if($request->hasFile('display_picture')) 
+            $team['display_picture'] = $request->display_picture->store('team/images');
         Team::where('id', $id)->update($team);
         $teams = Team::all();
             return redirect('admin/teams')->with('flash_success','Team Updated!');

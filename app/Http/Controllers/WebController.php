@@ -30,7 +30,8 @@ class WebController extends Controller {
             $banners = Banner::all();
             $features = Feature::all();
             $counts = Count::all();
-            return view('web.index',compact('banners','features','counts'));
+            $team_members = Team::orderBy('position')->get();
+            return view('web.index',compact('banners','features','counts','team_members'));
         }
     }
     
