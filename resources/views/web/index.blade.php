@@ -397,7 +397,7 @@
 	</section>
 	<!--//services-->
 	<!---->
-	<section class="grids_sec_2">
+<!-- 	<section class="grids_sec_2">
 		<div class="row style-grids_main">
 			<div class="col-md-6 grid_sec_info">
 				<div class="style-grid-2-text_info" data-aos="fade-right">
@@ -431,7 +431,7 @@
 			</div>
 
 		</div>
-	</section>
+	</section> -->
 	<!--/Projects-->
 	<section class="services">
 		<div class="container">

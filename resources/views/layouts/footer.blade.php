@@ -7,7 +7,7 @@
 						<h2>About Us</h2>
 					</div>
 					<div class="footer-text">
-						<p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. lacinia eget consectetur sed, convallis at tellus..</p>
+						<p>Syncsols is an automation ..</p>
 
 					</div>
 				</div>
@@ -18,15 +18,16 @@
 					<div class="footer-office-hour">
 						<ul>
 							<li class="hd">Address :</li>
-							<li>No.27 - 5549436 street lorem ipsum, ipsum City, Country</li>
+							<li>{{Setting::get('contact_address1')}}</li>
+							<li>{{Setting::get('contact_address2')}}</li>
 
 						</ul>
 						<ul>
-							<li class="hd">Phone:+ 1 (234) 567 8901</li>
+							<li class="hd">Phone: {{Setting::get('contact_number')}}</li>
 							<li class="hd">Email:
-								<a href="mailto:info@example.com">info@example.com</a>
+								<a href="mailto:{{Setting::get('contact_email')}}">{{Setting::get('contact_email')}}</a>
 							</li>
-							<li class="hd">Fax: 1(234) 567 8901</li>
+							<li class="hd">Fax: {{Setting::get('fax')}}</li>
 						</ul>
 					</div>
 				</div>
@@ -87,7 +88,7 @@
 					<div class="footer-title">
 						<h3>Subscribe</h3>
 					</div>
-					<p>Vivamus magna justo, lacinia eget consectetur sed.</p>
+					<p>to get our regular updates</p>
 					<form action="#" method="post" class="newsletter">
 						<input class="email" type="email" placeholder="Your email..." required="">
 						<button class="btn1">
@@ -110,30 +111,29 @@
 						<h4>Follow us on:</h4>
 					</li>
 					<li>
-						<a class="facebook" href="#">
+						<a class="facebook" href="{{Setting::get('facebook')}}">
 							<i class="fab fa-facebook-f"></i>
 						</a>
 					</li>
 					<li>
-						<a class="facebook" href="#">
+						<a class="facebook" href="{{Setting::get('twitter')}}">
 							<i class="fab fa-twitter"></i>
 						</a>
 					</li>
 					<li>
-						<a class="facebook" href="#">
+						<a class="facebook" href="{{Setting::get('google')}}">
 							<i class="fab fa-google-plus-g"></i>
 						</a>
 					</li>
 					<li>
-						<a class="facebook" href="#">
-							<i class="fab fa-pinterest-p"></i>
+						<a class="facebook" href="{{Setting::get('instagram')}}">
+							<i class="fab fa-instagram"></i>
 						</a>
 					</li>
 				</ul>
 			</div>
 			<div class="copyrightbottom" data-aos="fade-right">
-				<p>© 2018 Digital Biz. All Rights Reserved | Design by
-					<a href="http://w3layouts.com/">W3layouts</a>
+				<p>© 2019 {{Setting::get('site_name')}}. All Rights Reserved
 				</p>
 
 			</div>
