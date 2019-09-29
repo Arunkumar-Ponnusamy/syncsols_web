@@ -29,7 +29,8 @@ class WebController extends Controller {
         } else {
             $banners = Banner::all();
             $features = Feature::all();
-            return view('web.index',compact('banners','features'));
+            $counts = Count::all();
+            return view('web.index',compact('banners','features','counts'));
         }
     }
     

@@ -212,12 +212,14 @@
 	<!-- /stats -->
 	<section class="stats_test container-fluid">
 		<div class="row inner_stat_wthree_agileits">
-			<div class="col-md-3 stats_left counter_grid">
-				<i class="far fa-building"></i>
-				<p class="counter">145</p>
-				<h4>Branches</h4>
+            @foreach($counts as $key => $count)
+			<div class="col-md-3 stats_left @if($key!=0){{'counter_grid'.$key}}@else{{'counter_grid'}}@endif">
+				<i class="{{$count->fa_icon}}"></i>
+				<p class="counter">{{$count->count}}</p>
+				<h4>{{$count->name}}</h4>
 			</div>
-			<div class="col-md-3 stats_left counter_grid1">
+            @endforeach
+<!-- 			<div class="col-md-3 stats_left counter_grid1">
 				<i class="fas fa-users"></i>
 				<p class="counter">165</p>
 				<h4>Trainers</h4>
@@ -232,7 +234,7 @@
 				<p class="counter">1045</p>
 				<h4>Happy Clients</h4>
 			</div>
-
+ -->
 		</div>
 		</div>
 	</section>

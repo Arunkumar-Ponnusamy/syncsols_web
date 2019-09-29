@@ -266,8 +266,12 @@ class AdminController extends Controller {
     $count = $request->except('_token');
     try {
 
+        if(Count::all()->count()<4) {
         Count::create($count);        
         return redirect()->back()->with('flash_success','Count Added');
+        } else {
+        return redirect()->back()->with('flash_error','Exceeded Maximum entries');
+        }
     }
     catch(Exception $e) {
         // dd($e);
