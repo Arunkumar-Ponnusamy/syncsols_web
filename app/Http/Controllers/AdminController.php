@@ -375,7 +375,7 @@ class AdminController extends Controller {
     
     public function editAbouts(Request $request, $id) {
         $about = About::find($id);
-        return view('admin.edit-abouts',compact('testimonial'));
+        return view('admin.edit-abouts',compact('about'));
     }
     
     public function updateAbouts(Request $request, $id) {

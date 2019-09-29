@@ -37,7 +37,8 @@ class WebController extends Controller {
     }
     
     public function showAbout() {
-        return view('web.about');
+        $about = About::first();
+        return view('web.about',compact('about'));
     }
     
     public function showContact() {

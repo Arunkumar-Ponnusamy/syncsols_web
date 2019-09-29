@@ -10,7 +10,7 @@
 	</ol>
 	<!--/model-->
 	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -29,13 +29,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!--//model-->
 	<!--//banner-->
-	<section class="banner-bottom">
+<!-- 	<section class="banner-bottom">
 		<div class="container marketing">
 
-			<!-- Three columns of text below the carousel -->
 			<div class="row inner-sec-w3layouts-agileinfo">
 
 				<div class="col-lg-5 bt-bottom-info" data-aos="fade-left">
@@ -62,7 +61,7 @@
 						<a class="btn btn-secondary view" href="single.html" role="button">View details</a>
 					</p>
 				</div>
-				<!-- /.col-lg-4 -->
+
 				<div class="col-lg-4 bottom-sub-grid text-center" data-aos="zoom-in">
 					<div class="bt-icon">
 						<span class="far fa-thumbs-up"></span>
@@ -74,7 +73,7 @@
 						<a class="btn btn-secondary view" href="single.html" role="button">View details</a>
 					</p>
 				</div>
-				<!-- /.col-lg-4 -->
+
 				<div class="col-lg-4 bottom-sub-grid text-center" data-aos="zoom-in">
 					<div class="bt-icon">
 						<span class="fas fa-tv"></span>
@@ -86,16 +85,16 @@
 						<a class="btn btn-secondary view" href="single.html" role="button">View details</a>
 					</p>
 				</div>
-				<!-- /.col-lg-4 -->
+
 			</div>
 
 		</div>
-		<!-- /.row -->
+
 		</div>
 	</section>
-	<!---->
+ -->	<!---->
 	<!-- /stats -->
-	<section class="stats_test container-fluid">
+<!-- 	<section class="stats_test container-fluid">
 		<div class="row inner_stat_wthree_agileits">
 			<div class="col-md-3 stats_left counter_grid">
 				<i class="far fa-building"></i>
@@ -120,15 +119,15 @@
 
 		</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- //stats -->
 	<!--/services-->
-	<section class="services">
+<!-- 	<section class="services">
 		<div class="container">
-				<!---728x90--->
+
 
 			<h3 class="tittle_w3ls">Amazing Team</h3>
-				<!---728x90--->
+
 
 			<div class="row inner-sec-w3layouts-agileinfo">
 				<div class="col-md-3 col-sm-6 team-grids" data-aos="flip-left">
@@ -219,34 +218,16 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!--//services-->
 	<!---->
 	<section class="grids_sec_2">
-		<div class="row style-grids_main">
-			<div class="col-md-6 grid_sec_info">
-				<div class="style-grid-2-text_info" data-aos="fade-right">
-					<h3>We are composer one of the best in web designing.</h3>
-					<p>Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias consequatur.sed quia non numquam eius modi
-						tempora incidunt ut labore .</p>
-					<div class="bnr-button">
-						<button type="button" class="btn btn-primary play" data-toggle="modal" data-target="#exampleModal">
-							<i class="fas fa-play"></i>
-						</button>
-					</div>
-
-				</div>
-			</div>
-			<div class="col-md-6 style-image-2">
-			</div>
-
-		</div>
+		{!! $about->content !!}
 	</section>
 	<!---->
 	<!--/services-->
-	<section class="services">
+<!-- 	<section class="services">
 		<div class="container">
-				<!---728x90--->
 
 			<h3 class="tittle_w3ls">Amazing Features</h3>
 			<div class="row inner-sec-w3layouts-agileinfo">
@@ -297,10 +278,10 @@
 
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!--//services-->
 	<!--/reviews_sec-->
-	<section class="reviews_sec" id="testimonials">
+<!-- 	<section class="reviews_sec" id="testimonials">
 		<h3 class="tittle_w3ls_w3ls cen">Testimonial</h3>
 		<div class="inner-sec-w3layouts-agileinfo">
 			<section class="slider">
@@ -412,6 +393,6 @@
 				</div>
 			</section>
 		</div>
-	</section>
+	</section> -->
 <!-- footer -->
 @include('layouts.footer')
