@@ -38,22 +38,29 @@
 
 			<h3 class="tittle_w3ls">Projects</h3>
 				<!---728x90--->
-
+			@foreach($projects as $key => $project)
+			@if($key%3==0)
 			<div class="row inner-sec-w3layouts-agileinfo">
+			@endif
 
 				<div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
 					<div class="section_1_gallery_grid">
-						<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="{{asset('public/assets/new/images/g1.jpg')}}">
+						<a title="{{$project->header_text}}" href="{{img($project->picture)}}">
 							<div class="section_1_gallery_grid1">
-								<img src="{{asset('public/assets/new/images/g1.jpg')}}" alt=" " class="img-responsive" />
+								<img  width=100 height=150 src="{{img($project->picture)}}" alt=" " class="img-responsive" />
 								<div class="proj_gallery_grid1_pos">
-									<h3>Digital Biz</h3>
-									<p>Add some text</p>
+									<h3>{{$project->header_text}}</h3>
+									<p>{{$project->short_description}}</p>
 								</div>
 							</div>
 						</a>
 					</div>
-					<div class="section_1_gallery_grid" data-aos="zoom-in">
+				</div>
+			@if(($key+1)%3==0)
+			</div>
+			@endif
+			@endforeach
+<!-- 					<div class="section_1_gallery_grid" data-aos="zoom-in">
 						<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="{{asset('public/assets/new/images/g2.jpg')}}">
 							<div class="section_1_gallery_grid1">
 								<img src="{{asset('public/assets/new/images/g2.jpg')}}" alt=" " class="img-responsive" />
@@ -146,10 +153,8 @@
 						</a>
 					</div>
 				</div>
+ -->
 
-
-
-			</div>
 		</div>
 	</section>
 		<!---728x90--->

@@ -82,7 +82,7 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 						<li class="nav-item">
 							<a class="nav-link" href="{{url('projects')}}">Projects</a>
 						</li>
-						<li class="nav-item dropdown">
+<!-- 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 							    aria-expanded="false">
 								Services
@@ -92,7 +92,7 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="{{url('services')}}">Service 2</a>
 							</div>
-						</li>
+						</li> -->
 						<li class="nav-item">
 							<a class="nav-link" href="{{url('careers')}}">Careers</a>
 						</li>

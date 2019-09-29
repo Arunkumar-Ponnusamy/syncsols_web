@@ -146,10 +146,8 @@
 	<!--//banner-->
 	<section class="banner-bottom">
 		<div class="container">
-<!---728x90--->
 
-			<!-- Three columns of text below the carousel -->
-			<div class="row inner-sec-w3layouts-agileinfo">
+<!-- 			<div class="row inner-sec-w3layouts-agileinfo">
 
 				<div class="col-lg-5 bt-bottom-info" data-aos="fade-right">
 					<h5>We help our customer to build Digital World</h5>
@@ -160,7 +158,7 @@
 						convallis diam consequat magna vulputate malesuada. Cras a ornare elit. Nulla viverra pharetra sem, eget pulvinar neque
 						pharetra ac.</p>
 				</div>
-			</div>
+			</div> -->
 			
 			<div class="row inner-sec-w3layouts-agileinfo">
                 @foreach($features as $feature)
@@ -339,12 +337,10 @@
         </div>
     </section>
     	<!--/services-->
-	<section class="services">
+<!-- 	<section class="services">
 		<div class="container">
-			<!---728x90--->
 
 			<h3 class="tittle_w3ls">What We Do..</h3>
-				<!---728x90--->
 
 			<div class="row inner-sec-w3layouts-agileinfo">
 				<div class="col-lg-4 grid_info_main" data-aos="flip-left">
@@ -394,7 +390,7 @@
 
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!--//services-->
 	<!---->
 <!-- 	<section class="grids_sec_2">
@@ -436,21 +432,28 @@
 	<section class="services">
 		<div class="container">
 			<h3 class="tittle_w3ls">Our Works</h3>
+			@foreach($projects as $key => $project)
+			@if($key%3==0)
 			<div class="row inner-sec-w3layouts-agileinfo">
-
+			@endif
 				<div class="col-md-4 proj_gallery_grid" data-aos="zoom-in">
 					<div class="section_1_gallery_grid">
-						<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="{{asset('public/assets/new/images/g1.jpg')}}">
+						<a title="{{$project->header_text}}" href="{{img($project->picture)}}">
 							<div class="section_1_gallery_grid1">
-								<img src="{{asset('public/assets/new/images/g1.jpg')}}" alt=" " class="img-responsive" />
+								<img width=100 height=150 src="{{img($project->picture)}}" alt=" " class="img-responsive" />
 								<div class="proj_gallery_grid1_pos">
-									<h3>Digital Biz</h3>
-									<p>Add some text</p>
+									<h3>{{$project->header_text}}</h3>
+									<p>{{$project->short_description}}</p>
 								</div>
 							</div>
 						</a>
 					</div>
-					<div class="section_1_gallery_grid" data-aos="zoom-in">
+				</div>
+			@if(($key+1)%3==0)
+			</div>
+			@endif
+			@endforeach
+<!-- 					<div class="section_1_gallery_grid" data-aos="zoom-in">
 						<a title="Donec sapien massa, placerat ac sodales ac, feugiat quis est." href="{{asset('public/assets/new/images/g2.jpg')}}">
 							<div class="section_1_gallery_grid1">
 								<img src="{{asset('public/assets/new/images/g2.jpg')}}" alt=" " class="img-responsive" />
@@ -541,12 +544,10 @@
 								</div>
 							</div>
 						</a>
-					</div>
-				</div>
+					</div> -->
 
 
 
-			</div>
 		</div>
 	</section>
 	<!--//Projects-->

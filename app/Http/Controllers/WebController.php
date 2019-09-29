@@ -33,7 +33,8 @@ class WebController extends Controller {
             $counts = Count::all();
             $team_members = Team::orderBy('position')->get();
             $testimonials = Testimonial::all();
-            return view('web.index',compact('banners','features','counts','team_members','testimonials'));
+            $projects = Project::all();
+            return view('web.index',compact('banners','features','counts','team_members','testimonials','projects'));
         }
     }
     
@@ -68,7 +69,8 @@ class WebController extends Controller {
     }
 
     public function showProjectpage() {
-        return view('web.projects');
+        $projects = Project::all();
+        return view('web.projects',compact('projects'));
     }
     
 

@@ -448,6 +448,8 @@ class AdminController extends Controller {
     public function addProjects(Request $request) {
     $project = $request->except('_token');
     try {
+        if($request->hasFile('picture')) 
+            $project['picture'] = $request->picture->store('project/images');
 
         Project::create($project);        
         return redirect()->back()->with('flash_success','Project Added');
@@ -466,6 +468,8 @@ class AdminController extends Controller {
     public function updateProjects(Request $request, $id) {
     $project = $request->except('_token');
     try {
+        if($request->hasFile('picture')) 
+            $project['picture'] = $request->picture->store('project/images');
         Project::where('id', $id)->update($project);
         $projects = Project::all();
             return redirect('admin/projects')->with('flash_success','Project Updated!');
