@@ -318,7 +318,8 @@ class AdminController extends Controller {
     public function addTestimonials(Request $request) {
     $testimonial = $request->except('_token');
     try {
-
+        if($request->hasFile('display_picture')) 
+            $testimonial['display_picture'] = $request->display_picture->store('testimonial/images');
         Testimonial::create($testimonial);        
         return redirect()->back()->with('flash_success','Testimonial Added');
     }
@@ -336,7 +337,9 @@ class AdminController extends Controller {
     public function updateTestimonials(Request $request, $id) {
     $testimonial = $request->except('_token');
     try {
-        Testimonial::where('id', $id)->update($work);
+        if($request->hasFile('display_picture')) 
+            $testimonial['display_picture'] = $request->display_picture->store('testimonial/images');
+        Testimonial::where('id', $id)->update($testimonial);
         $testimonials = Testimonial::all();
             return redirect('admin/testimonials')->with('flash_success','Testimonial Updated!');
     }

@@ -169,7 +169,7 @@
 <div class="form-group">
 <label for="input-text" class="col-sm-2 control-label">Review</label>
 <div class="col-sm-10">
-<textarea type="text" name="review"  value="{{$testimonial->review}}" class="form-control" placeholder="Review"></textarea>
+<textarea type="text" name="review"  value="" class="form-control" placeholder="Review">{{$testimonial->review}}</textarea>
 </div>
 </div>
 </br>
@@ -216,35 +216,6 @@
 <!-- End content here -->
 <!-- ============================================================== -->
 
-</div>
-<div class="content-page">
-<div class="content">
-    <table id="table_id" class="display">
-        <thead>
-            <tr>
-                <th>No.</th>
-                <th>Name</th>
-                <th>Display Picture</th>
-                <th>Review</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-          @foreach($testimonials as $index=>$testimonial)
-            <tr>
-                <td>{{$index+1}}</td>
-                <td>{{$testimonial->name}}</td>
-                <td><img src="{{img($testimonial->display_picture)}}" width="50"></td>
-                <td>{{$testimonial->review}}</td>
-                <td>
-                                    <a href="{{url('admin/testimonials/'.$testimonial->id)}}" class="btn btn-info"><i class="fa fa-pencil"></i> Edit</a>
-                                    <a href="{{url('admin/testimonials/delete/'.$testimonial->id)}}"><button class="btn btn-danger" onclick="return confirm('Are you sure?')"><i class="fa fa-trash"></i> Delete</button></a>
-                </td>
-            </tr>
-          @endforeach
-        </tbody>
-    </table>
-</div>
 </div>
 <!-- End right content -->
 

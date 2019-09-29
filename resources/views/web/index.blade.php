@@ -557,41 +557,42 @@
 			<section class="slider">
 				<div class="flexslider">
 					<ul class="slides">
+                        @foreach($testimonials as $testimonial)
 						<li>
 							<div class="testimonials_grid">
 								<div class="testimonials_grid-inn">
-									<img src="{{asset('public/assets/new/images/t3.jpg')}}" alt=" " class="img-responsive" />
+									<img width=70 src="{{img($testimonial->display_picture)}}" alt=" " class="img-responsive" />
 									<div class="test_social_pos">
 										<ul class="social_list1">
 											<li>
-												<a href="#" class="facebook1">
+												<a target="_blank" href="{{$testimonial->facebook}}" class="facebook1">
 													<i class="fab fa-facebook-f"></i>
 
 												</a>
 											</li>
 											<li>
-												<a href="#" class="twitter2">
+												<a target="_blank" href="{{$testimonial->twitter}}" class="twitter2">
 													<i class="fab fa-twitter"></i>
 
 												</a>
 											</li>
 											<li>
-												<a href="#" class="dribble3">
+												<a target="_blank" href="{{$testimonial->dripple}}" class="dribble3">
 													<i class="fab fa-dribbble"></i>
 												</a>
 											</li>
 										</ul>
 									</div>
 								</div>
-								<h3>Gretchen
-									<span>Customer</span>
+								<h3>{{$testimonial->name}}
+<!-- 									<span>Customer</span> -->
 								</h3>
-								<i>United States</i>
-								<p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus. Proin
-									eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
+								<i>{{$testimonial->country}}</i>
+								<p>{{$testimonial->review}}</p>
 							</div>
 						</li>
-						<li>
+                        @endforeach
+<!-- 						<li>
 							<div class="testimonials_grid">
 								<div class="testimonials_grid-inn">
 									<img src="{{asset('public/assets/new/images/t2.jpg')}}" alt=" " class="img-responsive" />
@@ -658,7 +659,7 @@
 								<p>Maecenas interdum, metus vitae tincidunt porttitor, magna quam egestas sem, ac scelerisque nisl nibh vel lacus. Proin
 									eget gravida odio. Donec ullamcorper est eu accumsan cursus.</p>
 							</div>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</section>
