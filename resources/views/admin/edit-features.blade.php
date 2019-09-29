@@ -140,6 +140,7 @@
 <label for="input-text" class="col-sm-2 control-label">FA Icon</label>
 <div class="col-sm-10">
 <input type="text" name="fa_icon" value="{{$feature->fa_icon}}" class="form-control" id="input-text" placeholder="FA Icon">
+<a target="_blank" href="https://fontawesome.com/v5.6.0/icons?d=gallery">What's this?</a> Eg: fas fa-trophy
 </div>
 </div>
 </br>

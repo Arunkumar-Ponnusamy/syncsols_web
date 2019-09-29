@@ -18,6 +18,7 @@
         <link href="{{asset('public/assets/libs/jqueryui/ui-lightness/jquery-ui-1.10.4.custom.min.css')}}" rel="stylesheet" />
         <link href="{{asset('public/assets/libs/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" />
         <link href="{{asset('public/assets/libs/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('public/assets/new/css/fontawesome-all.css')}}" rel="stylesheet">
         <link href="{{asset('public/assets/libs/fontello/css/fontello.css')}}" rel="stylesheet" />
         <link href="{{asset('public/assets/libs/animate-css/animate.min.css')}}" rel="stylesheet" />
         <link href="{{asset('public/assets/libs/nifty-modal/css/component.css')}}" rel="stylesheet" />

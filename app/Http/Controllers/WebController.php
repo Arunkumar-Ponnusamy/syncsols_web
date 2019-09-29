@@ -28,7 +28,8 @@ class WebController extends Controller {
             return view('web.syncsols_temp');
         } else {
             $banners = Banner::all();
-            return view('web.index',compact('banners'));
+            $features = Feature::all();
+            return view('web.index',compact('banners','features'));
         }
     }
     

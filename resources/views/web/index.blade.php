@@ -163,20 +163,22 @@
 			</div>
 			
 			<div class="row inner-sec-w3layouts-agileinfo">
+                @foreach($features as $feature)
 				<div class="col-lg-4 bottom-sub-grid text-center aos-init aos-animate" data-aos="zoom-in">
 					<div class="bt-icon">
 
-						<span class="fas fa-trophy"></span>
+						<span class="{{$feature->fa_icon}}"></span>
 					</div>
 
-					<h4 class="sub-tittle_w3ls">Stylish Design</h4>
-					<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+					<h4 class="sub-tittle_w3ls">{{$feature->highlight_text}}</h4>
+					<p>{{$feature->small_description}}</p>
 					<p>
 						<a class="btn btn-secondary view" href="single.html" role="button">View details</a>
 					</p>
 				</div>
+                @endforeach
 				<!-- /.col-lg-4 -->
-				<div class="col-lg-4 bottom-sub-grid text-center aos-init aos-animate" data-aos="zoom-in">
+<!-- 				<div class="col-lg-4 bottom-sub-grid text-center aos-init aos-animate" data-aos="zoom-in">
 					<div class="bt-icon">
 						<span class="far fa-thumbs-up"></span>
 					</div>
@@ -187,7 +189,7 @@
 						<a class="btn btn-secondary view" href="single.html" role="button">View details</a>
 					</p>
 				</div>
-				<!-- /.col-lg-4 -->
+				/.col-lg-4
 				<div class="col-lg-4 bottom-sub-grid text-center aos-init aos-animate" data-aos="zoom-in">
 					<div class="bt-icon">
 						<span class="fas fa-tv"></span>
@@ -199,7 +201,7 @@
 						<a class="btn btn-secondary view" href="single.html" role="button">View details</a>
 					</p>
 				</div>
-				<!-- /.col-lg-4 -->
+ -->				<!-- /.col-lg-4 -->
 			</div>
 		</div>
 		<!-- /.row -->

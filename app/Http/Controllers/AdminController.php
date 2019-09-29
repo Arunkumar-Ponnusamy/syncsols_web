@@ -131,9 +131,12 @@ class AdminController extends Controller {
     public function addFeatures(Request $request) {
     $feature = $request->except('_token');
     try {
-
-        Feature::create($feature);        
-        return redirect()->back()->with('flash_success','Feature Added');
+        if(Feature::all()->count()<3) {
+            Feature::create($feature);        
+            return redirect()->back()->with('flash_success','Feature Added');
+        } else {
+            return redirect()->back()->with('flash_error','Allowed to add only 3 Features');
+        }
     }
     catch(Exception $e) {
         // dd($e);
