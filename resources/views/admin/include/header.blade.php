@@ -327,6 +327,14 @@
       </ul>
     </li>
 
+    <li class='has_sub'><a href='javascript:void(0);'><i class="fa fa-question-circle"></i> <span>Career</span> 
+    
+    <span class="pull-right"><i class="fa fa-angle-down"></i></span> <span class="label label-primary pull-right">1</span></a>
+      <ul>
+        <li><a href="{{url('admin/careers')}}"><span>Career</span></a></li>
+      </ul>
+    </li>
+
     <li class='has_sub'><a href='javascript:void(0);'><i class="fa fa-product-hunt"></i> <span>Projects Page</span> 
     
     <span class="pull-right"><i class="fa fa-angle-down"></i></span> <span class="label label-primary pull-right">1</span></a>

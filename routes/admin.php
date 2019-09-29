@@ -359,6 +359,46 @@
     );
 
     Route::get(
+         'careers',
+            [
+                'as'        =>  'showCareers',
+                'uses'      =>  'AdminController@showCareers'
+            ]
+    );
+
+    Route::post(
+         'careers',
+            [
+                'as'        =>  'addCareers',
+                'uses'      =>  'AdminController@addCareers'
+            ]
+    );
+
+    Route::get(
+         'careers/{id}',
+            [
+                'as'        =>  'editCareers',
+                'uses'      =>  'AdminController@editCareers'
+            ]
+    );
+
+    Route::post(
+         'careers/{id}',
+            [
+                'as'        =>  'updateCareers',
+                'uses'      =>  'AdminController@updateCareers'
+            ]
+    );
+
+    Route::get(
+         'careers/delete/{id}',
+            [
+                'as'        =>  'deleteCareers',
+                'uses'      =>  'AdminController@deleteCareers'
+            ]
+    );
+
+    Route::get(
          'projects',
             [
                 'as'        =>  'showProjects',

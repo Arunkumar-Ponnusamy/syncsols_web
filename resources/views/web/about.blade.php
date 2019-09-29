@@ -222,7 +222,9 @@
 	<!--//services-->
 	<!---->
 	<section class="grids_sec_2">
+		@if(isset($about->content))
 		{!! $about->content !!}
+		@endif
 	</section>
 	<!---->
 	<!--/services-->

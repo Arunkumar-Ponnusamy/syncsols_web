@@ -47,6 +47,14 @@
             ]
     );
 
+    Route::get(
+         'careers',
+            [
+                'as'        =>  'showCareerpage',
+                'uses'      =>  'WebController@showCareer'
+            ]
+    );
+
     // Route::get(
     //      'service',
     //         [

@@ -14,6 +14,7 @@ use App\About;
 use App\Project;
 use App\Service;
 use App\Settings;
+use App\Career;
 use Setting;
 
 class AdminController extends Controller {
@@ -395,6 +396,48 @@ class AdminController extends Controller {
         $about = About::find($id);
         $about->delete();
         return redirect()->back()->with('flash_success','About Deleted');
+    }
+    
+    public function showCareers() {
+        $careers = Career::all();
+        return view('admin.career',compact('careers'));
+    }
+    
+    public function addCareers(Request $request) {
+    $career = $request->except('_token');
+    try {
+
+        Career::create($career);        
+        return redirect()->back()->with('flash_success','Career Added');
+    }
+    catch(Exception $e) {
+        // dd($e);
+        return redirect()->back()->with('flash_error',$e->getMessage());
+    }
+    }
+    
+    public function editCareers(Request $request, $id) {
+        $career = Career::find($id);
+        return view('admin.edit-careers',compact('career'));
+    }
+    
+    public function updateCareers(Request $request, $id) {
+    $career = $request->except('_token');
+    try {
+        Career::where('id', $id)->update($career);
+        $careers = Career::all();
+            return redirect('admin/careers')->with('flash_success','Career Updated!');
+    }
+    catch(Exception $e) {
+        // dd($e);
+        return redirect()->back()->with('flash_error',$e->getMessage());
+    }
+    }
+    
+    public function deleteCareers(Request $request, $id) {
+        $career = Career::find($id);
+        $career->delete();
+        return redirect()->back()->with('flash_success','Career Deleted');
     }
     
     public function showProjects() {
