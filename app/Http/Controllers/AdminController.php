@@ -57,13 +57,14 @@ class AdminController extends Controller {
     
     public function update_setting(Request $request) {
         $requests = $request->except('_token');
+
+        if(!$request->DEMO_MODE) {
+            $requests['DEMO_MODE'] = 0;
+        }
+        
         foreach($requests as $key=>$value) {
             if($key=='site_logo') {
                 $value = $request->site_logo->store('site');
-            }
-            if(!$request->DEMO_MODE) {
-                $key = 'DEMO_MODE';
-                $value = 0;
             }
             Setting::set($key, $value);
             Setting::save();
