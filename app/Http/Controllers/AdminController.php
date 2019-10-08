@@ -232,7 +232,7 @@ class AdminController extends Controller {
     public function addWorks(Request $request) {
     $work = $request->except('_token');
     try {
-
+        $work['picture'] = $request->picture->store('work/images');
         Work::create($work);        
         return redirect()->back()->with('flash_success','Work Added');
     }
@@ -250,6 +250,7 @@ class AdminController extends Controller {
     public function updateWorks(Request $request, $id) {
     $work = $request->except('_token');
     try {
+        $work['picture'] = $request->picture->store('work/images');
         Work::where('id', $id)->update($work);
         $works = Work::all();
             return redirect('admin/works')->with('flash_success','Work Updated!');
