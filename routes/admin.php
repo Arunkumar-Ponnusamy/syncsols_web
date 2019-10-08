@@ -478,5 +478,45 @@
             ]
     );
 
+    Route::get(
+         'clients',
+            [
+                'as'        =>  'showClients',
+                'uses'      =>  'AdminController@showClients'
+            ]
+    );
+
+    Route::post(
+         'clients',
+            [
+                'as'        =>  'addClients',
+                'uses'      =>  'AdminController@addClients'
+            ]
+    );
+
+    Route::get(
+         'clients/{id}',
+            [
+                'as'        =>  'editClients',
+                'uses'      =>  'AdminController@editClients'
+            ]
+    );
+
+    Route::post(
+         'clients/{id}',
+            [
+                'as'        =>  'updateClients',
+                'uses'      =>  'AdminController@updateClients'
+            ]
+    );
+
+    Route::get(
+         'clients/delete/{id}',
+            [
+                'as'        =>  'deleteClients',
+                'uses'      =>  'AdminController@deleteClients'
+            ]
+    );
+
 
 Route::get('/dropify',    'AdminController@dropify')->name('dropify');

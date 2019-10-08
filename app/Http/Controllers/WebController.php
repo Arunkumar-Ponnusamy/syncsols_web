@@ -13,6 +13,7 @@ use App\Count;
 use App\Testimonial;
 use App\About;
 use App\Career;
+use App\Client;
 use App\Project;
 use App\Service;
 
@@ -41,6 +42,11 @@ class WebController extends Controller {
     public function showAbout() {
         $about = About::first();
         return view('web.about',compact('about'));
+    }
+    
+    public function showClient() {
+        $clients = Client::all();
+        return view('web.client',compact('clients'));
     }
     
     public function showContact() {

@@ -15,6 +15,7 @@ use App\Project;
 use App\Service;
 use App\Settings;
 use App\Career;
+use App\Client;
 use Setting;
 
 class AdminController extends Controller {
@@ -230,16 +231,16 @@ class AdminController extends Controller {
     }
     
     public function addWorks(Request $request) {
-    $work = $request->except('_token');
-    try {
-        $work['picture'] = $request->picture->store('work/images');
-        Work::create($work);        
-        return redirect()->back()->with('flash_success','Work Added');
-    }
-    catch(Exception $e) {
-        // dd($e);
-        return redirect()->back()->with('flash_error',$e->getMessage());
-    }
+        $work = $request->except('_token');
+        try {
+            $work['picture'] = $request->picture->store('work/images');
+            Work::create($work);        
+            return redirect()->back()->with('flash_success','Work Added');
+        }
+        catch(Exception $e) {
+            // dd($e);
+            return redirect()->back()->with('flash_error',$e->getMessage());
+        }
     }
     
     public function editWorks(Request $request, $id) {
@@ -530,5 +531,50 @@ class AdminController extends Controller {
         return redirect()->back()->with('flash_success','Service Deleted');
     }    
     
+    public function showClients() {
+        $clients = Client::all();
+        return view('admin.clients',compact('clients'));
+    }
     
+    public function addClients(Request $request) {
+    $client = $request->except('_token');
+    try {
+        if($request->hasFile('picture')) 
+            $client['picture'] = $request->picture->store('client/images');
+
+        Client::create($client);        
+        return redirect()->back()->with('flash_success','Client Added');
+    }
+    catch(Exception $e) {
+        // dd($e);
+        return redirect()->back()->with('flash_error',$e->getMessage());
+    }
+    }
+    
+    public function editClients(Request $request, $id) {
+        $client = Client::find($id);
+        return view('admin.edit-clients',compact('client'));
+    }
+    
+    public function updateClients(Request $request, $id) {
+    $client = $request->except('_token');
+    try {
+        if($request->hasFile('picture')) 
+            $client['picture'] = $request->picture->store('client/images');
+        Client::where('id', $id)->update($client);
+        $clients = Client::all();
+            return redirect('admin/clients')->with('flash_success','Client Updated!');
+    }
+    catch(Exception $e) {
+        // dd($e);
+        return redirect()->back()->with('flash_error',$e->getMessage());
+    }
+    }
+    
+    public function deleteClients(Request $request, $id) {
+        $client = Client::find($id);
+        $client->delete();
+        return redirect()->back()->with('flash_success','Client Deleted');
+    }    
+
 }

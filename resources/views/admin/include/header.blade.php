@@ -343,6 +343,14 @@
       </ul>
     </li>
 
+    <li class='has_sub'><a href='javascript:void(0);'><i class="fa fa-product-hunt"></i> <span>Clients Page</span> 
+    
+    <span class="pull-right"><i class="fa fa-angle-down"></i></span> <span class="label label-primary pull-right">1</span></a>
+      <ul>
+        <li><a href="{{url('admin/clients')}}"><span>Client Detail</span></a></li>
+      </ul>
+    </li>
+
     <li class='has_sub'><a href='javascript:void(0);'><i class="fa fa-life-ring"></i> <span>Services Page</span> 
     
     <span class="pull-right"><i class="fa fa-angle-down"></i></span> <span class="label label-primary pull-right">1</span></a>
