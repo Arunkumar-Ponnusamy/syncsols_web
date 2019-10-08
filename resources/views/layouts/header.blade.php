@@ -24,6 +24,16 @@
 	<link href="{{asset('public/assets/new/css/simpleLightbox.css')}}" rel='stylesheet' type='text/css' />
 	<link href="{{asset('public/assets/new/css/fontawesome-all.css')}}" rel="stylesheet">
 	<link href="http://fonts.googleapis.com/css?family=Poppins:100i,200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149356938-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-149356938-1');
+	</script>
 </head>
 
 <body>
