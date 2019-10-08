@@ -296,7 +296,7 @@ class AdminController extends Controller {
     public function updateCounts(Request $request, $id) {
     $count = $request->except('_token');
     try {
-        Count::where('id', $id)->update($work);
+        Count::where('id', $id)->update($count);
         $counts = Count::all();
             return redirect('admin/counts')->with('flash_success','Count Updated!');
     }
