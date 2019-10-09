@@ -552,7 +552,7 @@
 	</section>
 	<!--//Projects-->
 	<!--reviews_sec-->
-	<section class="reviews_sec" id="testimonials">
+<!--	<section class="reviews_sec" id="testimonials">
 		<h3 class="tittle_w3ls cen">Testimonial</h3>
 		<div class="inner-sec-w3layouts-agileinfo">
 			<section class="slider">
@@ -586,13 +586,13 @@
 									</div>
 								</div>
 								<h3>{{$testimonial->name}}
-<!-- 									<span>Customer</span> -->
+ 									<span>Customer</span>
 								</h3>
 								<i>{{$testimonial->country}}</i>
 								<p>{{$testimonial->review}}</p>
 							</div>
 						</li>
-                        @endforeach
+                        @endforeach  -->
 <!-- 						<li>
 							<div class="testimonials_grid">
 								<div class="testimonials_grid-inn">
