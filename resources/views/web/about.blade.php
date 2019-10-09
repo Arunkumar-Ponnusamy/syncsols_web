@@ -1,5 +1,15 @@
 @include('layouts.header')
-	<!--/banner-->
+<style type="text/css">
+	
+.about {
+	padding-left: 5%;
+    padding-bottom: 5%;
+    padding-top: 2%;
+    border: azure;
+    border-style: groove;
+    margin-top: -1%;	
+}	
+</style>	<!--/banner-->
 	<div class="banner-inner">
 	</div>
 	<ol class="breadcrumb">
@@ -221,7 +231,7 @@
 	</section> -->
 	<!--//services-->
 	<!---->
-	<section class="grids_sec_2">
+	<section class="grids_sec_2 about">
 		@if(isset($about->content))
 		{!! $about->content !!}
 		@endif
