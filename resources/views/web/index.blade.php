@@ -48,6 +48,123 @@
 }
 */
 
+/* Slider */
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.partner-image {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}	
+
+
 </style>
 	<!--/banner-->
 	<div class="banner">
@@ -238,16 +355,14 @@
 	</section>
     <br/>
 	<!-- //stats -->
-    <section class="team">
+<!--     <section class="team">
         <div class="container">
-                <!---728x90--->
 
             <h3 class="tittle_w3ls">Amazing Team</h3>
-                <!---728x90--->
 
             <div class="row inner-sec-w3layouts-agileinfo">
                 @foreach($team_members as $key => $team)
-                <div class="col-md-3 col-sm-6 team-grids" data-aos="@if($key%2==0){{'flip-left'}}@else{{'flip-right'}}@endif">
+                <div class="col-md-3 col-sm-6 team-grids slider" data-aos="@if($key%2==0){{'flip-left'}}@else{{'flip-right'}}@endif">
                     <img src="{{img($team->display_picture)}}" width=250 class="img-responsive" alt="">
                     <div class="team-info">
                         <div class="caption">
@@ -269,7 +384,7 @@
 
                     </div>
                 </div>
-                @endforeach
+                @endforeach -->
 <!--                 <div class="col-md-3 col-sm-6 team-grids" data-aos="flip-right">
                     <img src="{{asset('public/assets/new/images/p2.jpg')}}" class="img-responsive" alt="">
                     <div class="team-info">
@@ -333,9 +448,36 @@
                         </div>
                     </div>
                 </div> -->
-            </div>
+<!--             </div>
         </div>
-    </section>
+    </section> -->
+            <h3 class="tittle_w3ls" style="padding-bottom: 4%;padding-top: 4%;">Amazing Team</h3>
+   <section class="customer-logos">
+                @foreach($team_members as $key => $team)
+      <div class="slide"><img class="partner-image" src="{{img($team->display_picture)}}">
+                    <div class="team-info">
+                        <div class="caption">
+                            <h4>{{$team->name}}</h4>
+                            <h6>{{$team->designation}}<h6>
+                        </div>
+                        <div class="social-icons-section">
+                            <a class="fac" target="_blank" href="{{$team->facebook}}">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="twitter" target="_blank" href="{{$team->twitter}}">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="pinterest" target="_blank" href="{{$team->linkedin}}">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+      </div>
+                @endforeach
+   </section>
     	<!--/services-->
 <!-- 	<section class="services">
 		<div class="container">

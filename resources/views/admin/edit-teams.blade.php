@@ -166,7 +166,7 @@
     @if($team->display_picture!='' && $team->display_picture!=NULL)
     <img style="height: 90px; margin-bottom: 15px; border-radius:1em;" src="{{img($team->display_picture)}}">
     @endif
-    <input type="file" name="display_picture" id="input-file-max-fs" class="dropify" data-max-file-size="2M" />
+    <input type="file" name="display_picture" id="input-file-max-fs" class="dropify" data-max-file-size="20M" />
 </div>
 </div>
 </br>

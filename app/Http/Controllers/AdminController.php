@@ -184,14 +184,14 @@ class AdminController extends Controller {
     public function addTeams(Request $request) {
     $team = $request->except('_token');
     try {
-        if(Team::all()->count()<4) {
+        // if(Team::all()->count()<4) {
         if($request->hasFile('display_picture')) 
             $team['display_picture'] = $request->display_picture->store('team/images');
         Team::create($team);        
         return redirect()->back()->with('flash_success','Team Added');
-        } else {
-        return redirect()->back()->with('flash_error','Maximum Entries Exceeded');
-        }
+        // } else {
+        // return redirect()->back()->with('flash_error','Maximum Entries Exceeded');
+        // }
     }
     catch(Exception $e) {
         // dd($e);

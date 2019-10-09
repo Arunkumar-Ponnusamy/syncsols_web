@@ -32,7 +32,7 @@
 					</div>
 				</div>
 				<div class="col-lg-3 footer-grid" data-aos="zoom-in">
-					<div class="footer-title">
+<!-- 					<div class="footer-title">
 						<h3>Recent Works</h3>
 					</div>
 					<div class="footer-list">
@@ -83,7 +83,7 @@
 						</div>
 						<div class="clearfix"></div>
 					</div>
-				</div>
+ -->				</div>
 				<div class="col-lg-3 footer-grid" data-aos="zoom-in">
 					<div class="footer-title">
 						<h3>Subscribe</h3>
