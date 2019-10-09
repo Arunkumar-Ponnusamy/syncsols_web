@@ -46,8 +46,7 @@ class WebController extends Controller {
     
     public function showClient() {
         $clients = Client::all();
-            $team_members = Team::orderBy('position')->get();
-        return view('web.client-test',compact('clients','team_members'));
+        return view('web.client-test',compact('clients'));
     }
     
     public function showContact() {
