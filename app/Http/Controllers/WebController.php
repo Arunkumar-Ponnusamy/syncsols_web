@@ -46,7 +46,7 @@ class WebController extends Controller {
     
     public function showClient() {
         $clients = Client::all();
-        return view('web.client-test',compact('clients'));
+        return view('web.client',compact('clients'));
     }
     
     public function showContact() {

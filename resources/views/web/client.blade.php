@@ -1,149 +1,87 @@
 @include('layouts.header')
-<div class="banner-inner">
-</div>
-<ol class="breadcrumb">
-	<li class="breadcrumb-item">
-		<a href="index.html">Home</a>
-	</li>
-	<li class="breadcrumb-item active">Clients/Partners</li>
-</ol>
-
-<style type="text/css">
-.header-text{
-  text-align:center;
-  padding: 20px;
-}
-/* Slider */
-
-.slick-slide {
-    margin: 0px 20px;
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<style>
+  .logo
+{
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+   -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  cursor:pointer;
 }
 
-.partner-image {
-    width: 100%;
-}
 
-.slick-slider
+.logo:hover
 {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-            user-select: none;
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-    -ms-touch-action: pan-y;
-        touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
+  filter: none; /* IE6-9 */
+  -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
 }
-
-.slick-list
-{
-    position: relative;
-    display: block;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-.slick-list:focus
-{
-    outline: none;
-}
-.slick-list.dragging
-{
-    cursor: pointer;
-    cursor: hand;
-}
-
-.slick-slider .slick-track,
-.slick-slider .slick-list
-{
-    -webkit-transform: translate3d(0, 0, 0);
-       -moz-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-         -o-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-}
-
-.slick-track
-{
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block;
-}
-.slick-track:before,
-.slick-track:after
-{
-    display: table;
-    content: '';
-}
-.slick-track:after
-{
-    clear: both;
-}
-.slick-loading .slick-track
-{
-    visibility: hidden;
-}
-
-.slick-slide
-{
-    display: none;
-    float: left;
-    min-height: 1px;
-}
-[dir='rtl'] .slick-slide
-{
-    float: right;
-}
-.slick-slide img
-{
-    display: block;
-}
-.slick-slide.slick-loading img
-{
-    display: none;
-}
-.slick-slide.dragging img
-{
-    pointer-events: none;
-}
-.slick-initialized .slick-slide
-{
-    display: block;
-}
-.slick-loading .slick-slide
-{
-    visibility: hidden;
-}
-.slick-vertical .slick-slide
-{
-    display: block;
-    height: auto;
-    border: 1px solid transparent;
-}
-.slick-arrow.slick-hidden {
-    display: none;
-}	
 </style>
 
-<section class="clients">
+<legend align="center">Our Happy Client's</legend>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+  
+  @foreach($clients as $index => $client)
+    @if($index%6==0)
+    <div class="item @if($index==0) {{'active'}} @endif container">
+    @endif
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="{{img($client->picture)}}" alt="...">    
+    @if(($index+1)%6==0)
+    </div>
+    @endif
+  @endforeach
+<!--     <div class="item active container">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+    </div>
+    
+    <div class="item container">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+      </div>
+    
+    <div class="item container">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+        <img class="col-md-2 col-sm-2 col-xs-2 logo img-responsive" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1/p160x160/1010549_378823185552943_1788436797_n.png" alt="...">
+     </div> -->
+    
+  </div>
 
-<div class="container" style="margin-bottom: 15%;">
-  <h2 class="header-text">Our  Partners/ Our Clients</h2>
-   <section class="customer-logos slider">
-   	@foreach($clients as $client)
-      <div class="slide"><img class="partner-image" src="{{img($client->picture)}}"></div>
-      <div class="slide"><img class="partner-image" src="{{img($client->picture)}}"></div>
-      <div class="slide"><img class="partner-image" src="{{img($client->picture)}}"></div>
-      <div class="slide"><img class="partner-image" src="{{img($client->picture)}}"></div>
-      <div class="slide"><img class="partner-image" src="{{img($client->picture)}}"></div>
-   	@endforeach
-   </section>
-   
-</div>	
-</section>
+    <div align="center" style="margin-top:20px;">
+    <!-- Controls -->
+          @if(count($clients)>6)
+          <a class="left" href="#carousel-example-generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right" href="#carousel-example-generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+          @endif
+    </div>
+  
+</div>
+    <!---728x90--->
+<script type="text/javascript">
+  $('.carousel').carousel()
+</script>
 @include('layouts.footer')
